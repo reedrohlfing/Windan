@@ -8,43 +8,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const filterButtons = document.querySelectorAll(".filter-button");
     const gridItems = document.querySelectorAll(".grid-item");
 
-    // Function to sample the average color from an image
-    async function getAverageColor(imgElement) {
-        const canvas = document.createElement("canvas");
-        const ctx = canvas.getContext("2d");
-        const img = new Image();
-        img.crossOrigin = "Anonymous"; // Enable cross-origin image fetching
-        img.src = imgElement.src;
-
-        return new Promise((resolve) => {
-            img.onload = function () {
-                canvas.width = img.width;
-                canvas.height = img.height;
-                ctx.drawImage(img, 0, 0, img.width, img.height);
-
-                // Sample the color from the center of the image (adjust as needed)
-                const x = Math.floor(img.width / 2);
-                const y = Math.floor(img.height / 2);
-                const pixel = ctx.getImageData(x, y, 1, 1).data;
-
-                const color = `rgb(${pixel[0]}, ${pixel[1]}, ${pixel[2]})`;
-                resolve(color);
-            };
-        });
-    }
-
-    // Function to apply the average color to the grid-item background
-    async function applyAverageColors() {
-        for (const gridItem of gridItems) {
-            const img = gridItem.querySelector("img");
-            if (img) {
-                const averageColor = await getAverageColor(img);
-                gridItem.style.backgroundColor = averageColor;
-                console.log("Applying Average color...");
-            }
-        }
-    }
-
     // Function to create grid items from product data
     function createGridItems(data) {
         console.log("Creating grid items...");
@@ -74,9 +37,6 @@ document.addEventListener("DOMContentLoaded", function () {
             // Append the grid item to the grid container
             gridContainer.appendChild(gridItem);
         });
-
-        // Apply average colors after creating grid items
-        applyAverageColors();
     }
 
     // Fetch product data from the external source
@@ -91,31 +51,31 @@ document.addEventListener("DOMContentLoaded", function () {
             console.error("Error fetching product data:", error);
         });
 
-    // Add click event listeners to filter buttons
-    filterButtons.forEach((button) => {
-        button.addEventListener("click", function () {
-            const category = this.getAttribute("data-category");
-            console.log("Button clicked...");
-            console.log(category)
+    // // Add click event listeners to filter buttons
+    // filterButtons.forEach((button) => {
+    //     button.addEventListener("click", function () {
+    //         const category = this.getAttribute("data-category");
+    //         console.log("Button clicked...");
+    //         console.log(category)
 
-            // Filter images by category
-            gridItems.forEach((item) => {
-                const itemCategory = item.getAttribute("data-category");
-                console.log(itemCategory)
+    //         // Filter images by category
+    //         gridItems.forEach((item) => {
+    //             const itemCategory = item.getAttribute("data-category");
+    //             console.log(itemCategory)
 
-                if (category === "all") {
-                    item.style.display = "block"; // Display all items
-                    console.log(category)
-                } 
-                else if (category === itemCategory){
-                    item.style.display = "block"; // Display matching items
-                    console.log(category)
-                    console.log(itemCategory)
-                }
-                else {
-                    item.style.display = "none"; // Hide non-matching items
-                }
-            });
-        });
-    });
+    //             if (category === "all") {
+    //                 item.style.display = "block"; // Display all items
+    //                 console.log(category)
+    //             } 
+    //             else if (category === itemCategory){
+    //                 item.style.display = "block"; // Display matching items
+    //                 console.log(category)
+    //                 console.log(itemCategory)
+    //             }
+    //             else {
+    //                 item.style.display = "none"; // Hide non-matching items
+    //             }
+    //         });
+    //     });
+    // });
 });

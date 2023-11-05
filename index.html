@@ -4,66 +4,81 @@
 <!-- Then in your web browser, access the site via http://localhost:8080/ -->
 
 <html>
-  <head>
-    <!--basic starting setup-->
-    <meta charset="utf-8">
-    <title>Windan</title>
-    <link rel="stylesheet" href="core.css">
-  </head>
 
-  <body>
-    <!--HEADER-->
-    <div class="header-container">
-        <h1 class="header">Windan</h1>
+<head>
+  <!--basic starting setup-->
+  <meta charset="utf-8">
+  <title>Windan Market</title>
+  <link rel="stylesheet" href="core.css">
+</head>
+
+<body>
+  <!--HEADER-->
+  <nav class="header-container">
+    <div class="header-column-left">
+      <img src="icons/search.png" alt="Search Icon" id="search-icon" onclick="navbarFilters()">
     </div>
-    
-    <!--FILTERS-->
-    <div class="filter-buttons">
-      <button class="filter-button" data-category="all">All</button>
-      <button class="filter-button" data-category="surf">Surf</button>
-      <button class="filter-button" data-category="city">City</button>
-      <!-- Add more category buttons as needed -->
-    </div>
-
-    <!--IMAGES-->
-    <div class="grid-container" id="grid-container">
-      <!-- Grid items will be populated here using JavaScript -->
-    </div>
-    <script src="image_import.js" defer></script>
-
-  </body>
-
-
-  <!-- ||||||||||||||||||FOOTER||||||||||||||||||||||||| -->
-  <footer class="footer">
-      <div class="footer-container">
-          <div class="footer-content">
-              <div class="footer-section">
-                  <h3>Coded to inspire.</h3>
-              </div>
-              <div class="footer-section">
-                  <h3>Windan Team</h3>
-                  <p>info@windan.com</p>
-                  <p>La Jolla, CA</p>
-              </div>
-              <div class="footer-section">
-                  <h3>Quick Links</h3>
-                  <ul>
-                      <li><a href="\">Windan Home</a></li>
-                      <li><a href="#">Recommendations</a></li>
-                      <li><a href="#">Advertising</a></li>
-                      <li><a href="\Report">Get Updates</a></li>
-                  </ul>
-              </div>
-              <div class="footer-section">
-                  <h3>Windan Socials</h3>
-                  <ul class="social-icons">
-                      <li><a href="https://www.instagram.com/windan.co/" target="_blank"><img src="https://static.xx.fbcdn.net/rsrc.php/v3/yx/r/tBxa1IFcTQH.png" alt="Instagram"></a></li>
-                  </ul>
-              </div>
-          </div>
+    <div class="header-column-center">
+      <h1 class="header-title">Windan Market</h1>
+      <div class="search-container">
+        <input type="text" id="search-input" placeholder="'vintage tee', 'swimwear', 'courdoroy', etc..."
+          oninput="searchTags()">
       </div>
-  </footer>
+    </div>
+    <div class="header-column-right">
 
+    </div>
+    <script src="search_bar.js" defer></script>
+  </nav>
+  <!--FILTERS-->
+  <div class="filter-buttons" id="filter-buttons">
+    <button class="filter-button" id="all-button" data-category="all" onclick="allButton()">All</button>
+    <button class="filter-button" id="surf-button" data-category="surf" onclick="surfButton()">Surf</button>
+    <button class="filter-button" id="city-button" data-category="city" onclick="cityButton()">City</button>
+    <script src="button_filters.js" defer></script>
+    <!-- Add more category buttons as needed -->
+  </div>
+
+  <!--IMAGES-->
+  <div class="grid-container" id="grid-container">
+    <!-- Grid items will be populated here using JavaScript -->
+  </div>
+
+  <!--Script for whole page-->
+  <script src="image_import.js" defer></script>
+</body>
+
+
+<!-- ||||||||||||||||||FOOTER||||||||||||||||||||||||| -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Coded to inspire.</h3>
+      </div>
+      <div class="footer-section">
+        <h3>Windan Team</h3>
+        <p>info@windan.com</p>
+        <p>La Jolla, CA</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul class="quick-links">
+          <li><a href="/">Windan Home</a></li>
+          <li><a href="#">Recommendations</a></li>
+          <li><a href="#">Advertising</a></li>
+          <li><a href="\Report">Get Updates</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Windan Socials</h3>
+        <ul class="social-icons">
+          <li><a href="https://www.instagram.com/windan.co/" target="_blank"><img id="instagram"
+                src="icons/instagram-light.png" alt="Instagram"></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
 
 </html>

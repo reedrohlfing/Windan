@@ -1,44 +1,125 @@
-.header-container{
-    display: flex;
-    justify-content: center; /* Horizontal centering */
-    align-items: center; /* Vertical centering */
-    height: 10vh; /* Adjust the container's height as needed */
+html {
+  background-color: white;
 }
-.header{
-    font-size: 70px;
-  }
 
-.filter-buttons{
-  position: center;
+.header-container {
+  position: fixed;
+  top: 0;
+  height: 69px;
+  width: 100%;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  column-gap: 200px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 200px;
-  padding-right: 200px;
+  align-items: center;
+  grid-template-columns: 1fr 1.5fr 1fr;
+  background-color: rgba(0, 0, 10, 0.8);
+  backdrop-filter: blur(15px);
+  z-index: 10;
 }
 
-.filter-button{
-  background-color: lightgoldenrodyellow;
+.header-column-left {
+  display: flex;
+  justify-content: center;
+}
+
+#search-icon {
+  transition: transform .2s;
+  width: 25px;
+  height: 25px;
+}
+
+#search-icon:hover {
+  transform: scale(1.5);
+}
+
+.search-container {
+  /* initially not shown until clicked */
+  display: none;
+}
+
+#search-input {
+  font-size: 25px;
+  width: 90%;
+  align-items: left;
+  color: rgb(213, 213, 213);
+  background-color: transparent;
   border-color: transparent;
-  border-radius: 10%;
+  border-bottom-color: rgb(213, 213, 213);
+
 }
 
+.header-column-center {
+  display: flex;
+  justify-content: center;
+}
 
-/* Reset some default styles for consistency */
-body, html {
-  margin: 0;
+.header-title {
+  font-size: 25px;
+  color: rgb(213, 213, 213);
+  text-align: center;
+}
+
+.filter-buttons {
+  position: fixed;
+  margin-top: 0px;
+  width: 100%;
+  /* initially not shown until clicked */
+  display: none;
+  z-index: 9;
+  grid-template-columns: repeat(3, 1fr);
+  background-color: rgba(0, 0, 10, 0.7);
+  backdrop-filter: blur(15px);
+}
+
+.filter-button {
+  font-size: 16px;
+  position: relative;
+  color: rgb(213, 213, 213);
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 20%;
+  padding-right: 20%;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+button:hover,
+button:active {
+  border-top-color: rgb(213, 213, 213);
+  font-weight: bold;
+}
+
+a:link,
+a:visited {
+  color: rgb(213, 213, 213);
+  text-decoration: none;
+}
+
+a:hover,
+a:active {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+body {
+  position: static;
+  margin-top: 71px;
+  margin-left: 0;
+  margin-right: 0;
+  display: flex;
+  flex-direction: column;
   padding: 0;
+  z-index: 5;
 }
 
 /* Create a 4-column grid layout */
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Four columns with equal width */
-  grid-auto-rows: auto; /* Automatically adjust row height based on content */
-  background-color: goldenrod;
-  overflow: hidden; /* Hide overflowing content */
+  grid-template-columns: repeat(4, 1fr);
+  /* Four columns with equal width */
+  grid-auto-rows: auto;
+  /* Automatically adjust row height based on content */
+  overflow: hidden;
+  /* Hide overflowing content */
 }
 
 /* Style grid items (you can customize this further) */
@@ -47,26 +128,37 @@ body, html {
   position: relative;
   border: transparent;
   text-align: center;
-  padding: 20px;
+  padding-left: 1px;
+  padding-right: 1px;
+  padding-bottom: 0;
 }
 
 /* Style images within grid items */
 .grid-item img {
-  max-width: 100%; /* Ensure images don't exceed the container width */
-  height: auto;
-  mask-image: linear-gradient(to top, transparent 60%, black 100%);
+  max-width: 100%;
+  /* Ensure images don't exceed the container width */
+  overflow: hidden;
 }
 
 
 /* Style the footer container */
 .footer {
-  color: #000000; /* Text color */
-  padding: 20px 0; /* Add some vertical spacing */
+  position: static;
+  color: rgb(213, 213, 213);
+  /* Text color */
+  padding: 20px 0;
+  /* Add some vertical spacing */
+  background-color: rgba(0, 0, 10, 0.8);
+  width: 100%;
+  margin-top: auto;
+  bottom: 0;
 }
 
 /* Center the content and limit its width */
 .footer-container {
-  max-width: 1200px; /* Adjust as needed */
+  max-width: 1200px;
+  /* Adjust as needed */
+  justify-content: space-evenly;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -74,23 +166,27 @@ body, html {
 /* Style the footer content sections */
 .footer-content {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
-  flex-wrap: wrap; /* Allow content to wrap to the next row on smaller screens */
+  flex-wrap: wrap;
+  /* Allow content to wrap to the next row on smaller screens */
 }
 
 .footer-section {
-  flex-basis: 24%; /* Adjust the width of each section */
-  margin-bottom: 20px; /* Add spacing between sections */
+  flex-basis: 24%;
+  /* Adjust the width of each section */
+  margin-bottom: 20px;
+  /* Add spacing between sections */
 }
 
 /* Style headings and paragraphs */
 .footer-section h3 {
-  font-size: 18px;
+  font-size: 19px;
   margin-bottom: 10px;
 }
 
 .footer-section p {
-  font-size: 14px;
+  font-size: 15px;
 }
 
 /* Style the quick links list */
@@ -101,20 +197,92 @@ body, html {
 
 .footer-section ul li {
   margin-bottom: 5px;
+  font-size: 15px;
 }
 
 /* Style the social media icons */
 .social-icons {
-  list-style: none;
-  padding: 0;
+  transition: transform .2s;
+  align-content: center;
+}
+
+#instagram:hover {
+  content: url("icons/instagram.png")
 }
 
 .social-icons li {
-  display: inline-block;
   margin-right: 10px;
 }
 
 .social-icons img {
-  width: 24px;
-  height: 24px;
+  width: 25px;
+  height: 25px;
+  padding: 5px;
+}
+
+/* Changes for mobile */
+@media (max-width:1500px) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+    /* Two columns on mobile devices */
+  }
+}
+
+@media (max-width:1200px) {
+  .header-container {
+    height: 140px;
+  }
+
+  .header-title {
+    font-size: 50px;
+    max-width: fit-content;
+  }
+
+  #search-input {
+    height: 50px;
+    font-size: 30px;
+  }
+
+  #search-icon {
+    transition: transform .2s;
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+  }
+
+  .filter-button {
+    font-size: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  body {
+    margin-top: 143px;
+  }
+
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-content {
+    flex-direction: column;
+    padding-left: 30px;
+  }
+
+  .footer-section ul li {
+    font-size: 25px;
+  }
+
+  .footer-section h3 {
+    font-size: 29px;
+  }
+
+  .footer-section p {
+    font-size: 25px;
+  }
+
+  .social-icons img {
+    width: 50px;
+    height: 50px;
+  }
 }
