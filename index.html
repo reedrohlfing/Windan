@@ -1,7 +1,9 @@
 <!DOCTYPE html>
+<!-- Removes scalability, for consitency accross devices -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
 
-<!-- To view this site locally, run "python -m http.server 8080" from this folder -->
-<!-- Then in your web browser, access the site via http://localhost:8080/ -->
+<!-- To view this site locally, run "npx browser-sync start --server --files "./*.html" --no-open --no-notify --directory" from this folder -->
+<!-- Then in your web browser, access the site via http://localhost:3000/ or mobile from http://192.168.1.147:3000/-->
 
 <html>
 
@@ -10,42 +12,52 @@
   <meta charset="utf-8">
   <title>Windan Market</title>
   <link rel="stylesheet" href="core.css">
+  <script src="scripts/image_import.js" defer></script>
+  <script src="scripts/search_bar.js" defer></script>
+  <script src="scripts/button_filters.js" defer></script>
+  <script src="scripts/wishlist.js" defer></script>
 </head>
 
 <body>
   <!--HEADER-->
   <nav class="header-container">
     <div class="header-column-left">
-      <img src="icons/search.png" alt="Search Icon" id="search-icon" onclick="navbarFilters()">
+      <img src="icons/search.png" alt="Search Icon" id="search-icon" onclick="clickSearch()">
     </div>
     <div class="header-column-center">
-      <h1 class="header-title">Windan Market</h1>
+      <h1 class="header-title">
+        <a href="/index.html">Windan Market</a>
+      </h1>
       <div class="search-container">
-        <input type="text" id="search-input" placeholder="'vintage tee', 'swimwear', 'courdoroy', etc..."
-          oninput="searchTags()">
+        <input type="search" id="search-input" placeholder="">
       </div>
     </div>
     <div class="header-column-right">
-
+      <img src="icons/wishlist-button.png" alt="Wishlist Saves" id="wishlist-saves-button">
+      <img src="icons/close-button.png" alt="Close Search" id="close-search-button" onclick="closeSearch()">
     </div>
-    <script src="search_bar.js" defer></script>
   </nav>
+
   <!--FILTERS-->
   <div class="filter-buttons" id="filter-buttons">
     <button class="filter-button" id="all-button" data-category="all" onclick="allButton()">All</button>
     <button class="filter-button" id="surf-button" data-category="surf" onclick="surfButton()">Surf</button>
     <button class="filter-button" id="city-button" data-category="city" onclick="cityButton()">City</button>
-    <script src="button_filters.js" defer></script>
     <!-- Add more category buttons as needed -->
   </div>
 
-  <!--IMAGES-->
-  <div class="grid-container" id="grid-container">
-    <!-- Grid items will be populated here using JavaScript -->
-  </div>
+  <!--Temporary release info-->
+  <p id="release">beta release (0.0.001)</p>
 
-  <!--Script for whole page-->
-  <script src="image_import.js" defer></script>
+  <!--PRODUCTS-->
+  <div class="middle-section" id="middle-section">
+    <div class="grid-container" id="grid-container">
+      <!-- Grid items will be populated here using image_import.js -->
+    </div>
+    <div class="no-search-results-inactive" id="no-search-results">
+      <h3>Sorry, no search results found.</h3>
+    </div>
+  </div>
 </body>
 
 
@@ -54,17 +66,17 @@
   <div class="footer-container">
     <div class="footer-content">
       <div class="footer-section">
-        <h3>Coded to inspire.</h3>
+        <h3 id="motto">Coded to inspire.</h3>
       </div>
       <div class="footer-section">
         <h3>Windan Team</h3>
-        <p>info@windan.com</p>
+        <p>info@windanmarket.com</p>
         <p>La Jolla, CA</p>
       </div>
       <div class="footer-section">
         <h3>Quick Links</h3>
         <ul class="quick-links">
-          <li><a href="/">Windan Home</a></li>
+          <li><a href="/index.html">Windan Home</a></li>
           <li><a href="#">Recommendations</a></li>
           <li><a href="#">Advertising</a></li>
           <li><a href="\Report">Get Updates</a></li>
@@ -73,7 +85,7 @@
       <div class="footer-section">
         <h3>Windan Socials</h3>
         <ul class="social-icons">
-          <li><a href="https://www.instagram.com/windan.co/" target="_blank"><img id="instagram"
+          <li><a href="https://www.instagram.com/windanmarket/" target="_blank"><img id="instagram"
                 src="icons/instagram-light.png" alt="Instagram"></a></li>
         </ul>
       </div>

@@ -1,6 +1,8 @@
 [
     {
         "\u00ef\u00bb\u00bfpriority": "1",
+        "id": "2023JAC1",
+        "year": "2023",
         "brand": "JACQUEMUS",
         "title": "La maille Pavane",
         "description": "Jacquard logo sweater.",
@@ -12,6 +14,8 @@
     },
     {
         "\u00ef\u00bb\u00bfpriority": "2",
+        "id": "2023JAC2",
+        "year": "2023",
         "brand": "JACQUEMUS",
         "title": "Les derbies Pavane",
         "description": "Grosgrain logo derbies.",
@@ -23,6 +27,8 @@
     },
     {
         "\u00ef\u00bb\u00bfpriority": "3",
+        "id": "2023RVC3",
+        "year": "2023",
         "brand": "RVCA",
         "title": "VA Sport Trainer Elastic Waist Shorts",
         "description": "Enhanced comfort for optimal performance. Made of performance nylon-blend fabric, these VA Sport trainer shorts are complete with an elasticized waistband with an internal drawcord, side pockets, and VA logo branding at the leg.",
@@ -34,6 +40,8 @@
     },
     {
         "\u00ef\u00bb\u00bfpriority": "4",
+        "id": "2023RVC4",
+        "year": "2023",
         "brand": "RVCA",
         "title": "Spun Spirit VHS T-Shirt",
         "description": "NATURALLY ALIGNED, RVCA X SPUN SPIRIT'S SECOND INSTALLMENT UNVEILS COSTA MESA'S ARTISTIC UNDERBELLY AND SIGNATURE AESTHETIC. FORD ARCHBOLD, THE FOUNDER OF SPUN SPIRIT, IS A LONGSTANDING ADVOCATE, ARTIST, AND WELLSPRING OF CREATIVE INSPIRATION, WITH A HERITAGE STEEPED IN RAW TALENT AND ICONIC SURF STYLE.",
@@ -45,6 +53,8 @@
     },
     {
         "\u00ef\u00bb\u00bfpriority": "5",
+        "id": "2023Vuo5",
+        "year": "2023",
         "brand": "Vuori",
         "title": "Ponto Performance Crew",
         "description": "Men's DreamKnit\u00e2\u201e\u00a2 Crew",
@@ -56,6 +66,8 @@
     },
     {
         "\u00ef\u00bb\u00bfpriority": "6",
+        "id": "2023Sat6",
+        "year": "2023",
         "brand": "SaturdaysNYC",
         "title": "Rhodes Padded Overshirt",
         "description": "Bungee",
@@ -67,6 +79,8 @@
     },
     {
         "\u00ef\u00bb\u00bfpriority": "7",
+        "id": "2023Sat7",
+        "year": "2023",
         "brand": "SaturdaysNYC",
         "title": "Rhodes Padded Overshirt",
         "description": "Bungee",
@@ -78,6 +92,8 @@
     },
     {
         "\u00ef\u00bb\u00bfpriority": "8",
+        "id": "2023Sat8",
+        "year": "2023",
         "brand": "SaturdaysNYC",
         "title": "Rhodes Padded Overshirt",
         "description": "Bungee",
@@ -89,6 +105,8 @@
     },
     {
         "\u00ef\u00bb\u00bfpriority": "9",
+        "id": "2023Sat9",
+        "year": "2023",
         "brand": "SaturdaysNYC",
         "title": "Rhodes Padded Overshirt",
         "description": "Bungee",
@@ -100,6 +118,8 @@
     },
     {
         "\u00ef\u00bb\u00bfpriority": "10",
+        "id": "2023Sat10",
+        "year": "2023",
         "brand": "SaturdaysNYC",
         "title": "Rhodes Padded Overshirt",
         "description": "Bungee",
@@ -111,6 +131,8 @@
     },
     {
         "\u00ef\u00bb\u00bfpriority": "11",
+        "id": "2023Sat11",
+        "year": "2023",
         "brand": "SaturdaysNYC",
         "title": "Rhodes Padded Overshirt",
         "description": "Bungee",
@@ -122,6 +144,8 @@
     },
     {
         "\u00ef\u00bb\u00bfpriority": "12",
+        "id": "2023Sat12",
+        "year": "2023",
         "brand": "SaturdaysNYC",
         "title": "Rhodes Padded Overshirt",
         "description": "Bungee",
