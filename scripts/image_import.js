@@ -1,140 +1,69 @@
-document.addEventListener("DOMContentLoaded", function () {
-    console.log("DOM loaded...");
+const gridContainer = document.getElementById("grid-container");
+const filterButtons = document.querySelectorAll(".filter-button");
+const gridItems = document.querySelectorAll(".grid-item");
+const itemsPerPage = 25;
 
-    // Replace this with the actual URL of your JSON file or API endpoint
-    const product_info = "product_info.json";
+// Function to create grid items from product data
+function createGridItems(data, page) {
+    console.log("Creating grid items...");
 
-    const gridContainer = document.getElementById("grid-container");
-    const filterButtons = document.querySelectorAll(".filter-button");
-    const gridItems = document.querySelectorAll(".grid-item");
+    // Calculate the start and end index based on the current page
+    const startIndex = (page - 1) * itemsPerPage;
+    const endIndex = startIndex + itemsPerPage;
 
-    // Function to create grid items from product data
-    function createGridItems(data) {
-        console.log("Creating grid items...");
-        data.forEach((product) => {
-            const gridItem = document.createElement("div");
-            gridItem.classList.add("grid-item");
+    // Get a subset of data based on the current page
+    const pageData = data.slice(startIndex, endIndex);
 
-            // Add the product id to the grid-item
-            gridItem.id = product.id;
+    // Check if there are more items to display
+    const moreItems = data.length > endIndex;
 
-            // Create an anchor element (<a>) for the image
-            const link = document.createElement("a");
-            link.id = "item-link";
-            link.href = product.siteURL; // Set the href attribute to the product's URL
-            link.target = "_blank"; // Open the link in a new tab
+    pageData.forEach((product) => {
+        var gridItem = buildGridItem(product)
+        gridContainer.appendChild(gridItem);
+    });
 
-            // Create an image element (<img>) and set its attributes
-            const img = document.createElement("img");
-            img.id = "item-image";
-            img.src = product.imageURL;
-            img.alt = "Image";
-
-            // Set the data-category attribute based on the product's category
-            gridItem.setAttribute("data-category", product.category);
-
-            // Append the image to the anchor element
-            link.appendChild(img);
-
-            // Append the anchor element to the grid item
-            gridItem.appendChild(link);
-
-            // Create div with 2 columns for product info and wishlist button
-            const itemDescDiv = document.createElement("div");
-            itemDescDiv.id = "item-desc-div";
-            const itemInfo = document.createElement("div");
-            itemInfo.id = "item-info-div";
-            const itemWishlist = document.createElement("div");
-            itemWishlist.id = "item-wishlist-div";
-
-            // Create item title
-            const title = document.createElement("h4");
-            title.id = "item-title";
-            title.textContent = product.title;
-
-            // Add item description
-            const description = document.createElement("p");
-            description.id = "item-description";
-            description.style.display = "none";
-            description.textContent = product.description;
-
-            // Create item price
-            const price = document.createElement("p");
-            price.id = "item-price";
-            price.textContent = "$" + product.price;
-
-            // Create item wishlist button
-            const wishlistButton = document.createElement("img");
-            wishlistButton.id = "item-wishlist-button"
-            wishlistButton.alt = "Wishlist Button"
-            wishlistButton.src = "icons/wishlist-button.png"
-
-            // Create item wishlist button
-            const savedButton = document.createElement("img");
-            savedButton.id = "item-saved-button"
-            savedButton.alt = "Saved Button"
-            savedButton.src = "icons/wishlist-check.png"
-
-            if (_isInWishList(product.id)) {
-                wishlistButton.style.display = "none"
-                savedButton.style.display = "block"
-            }
-            else {
-                wishlistButton.style.display = "block"
-                savedButton.style.display = "none"
-            }
-
-            // Add button functionality for hovering and clicking
-            wishlistButton.onclick = function () {
-                addToWishListClick(event);
-                // Show the saved check
-                wishlistButton.style.display = "none"
-                savedButton.style.display = "block"
-            }
-            savedButton.onclick = function () {
-                removeFromWishListClick(event);
-                // Remove the saved check
-                wishlistButton.style.display = "block"
-                savedButton.style.display = "none"
-            }
-
-            wishlistButton.onmouseover = function () {
-                wishlistButton.src = "icons/wishlist-button-dark.png"; // Change to hovered img src
-
-            }
-
-            wishlistButton.onmouseout = function () {
-                wishlistButton.src = "icons/wishlist-button.png"; // Reset to normal image src
-            }
-
-            // Append title description and price to item info div
-            itemInfo.appendChild(title);
-            itemInfo.appendChild(description);
-            itemInfo.appendChild(price);
-
-            // Append wishlist button to itemWishlist div
-            itemWishlist.appendChild(wishlistButton);
-            itemWishlist.appendChild(savedButton);
-
-            // Append the item info and item wish list divs to the item description div
-            itemDescDiv.appendChild(itemInfo);
-            itemDescDiv.appendChild(itemWishlist);
-
-            // Append the grid item to the grid container
-            gridItem.appendChild(itemDescDiv);
-            gridContainer.appendChild(gridItem);
-        });
+    document.getElementById("load-more-container").style.display = "block";
+    // Check if there are more items to display
+    if (!moreItems) {
+        // If no more items, hide the "Load More" button
+        document.getElementById("load-more-container").style.display = "none";
     }
+    // Stop showing loading circle
+    document.getElementById("loading-container").style.display = "none";
+}
 
-    // Fetch product data from the external source
+// Function to load more items
+function loadMore() {
+    currentPage = parseInt(localStorage.getItem("currentPage"));
+    currentPage++;
+    console.log(currentPage)
+    localStorage.setItem("currentPage", currentPage);
+    fetchProductData(currentPage);
+}
+
+
+const product_info = "product_info.json";
+// Fetch product data from the external source
+function fetchProductData(currentPage) {
     console.log("Fetching data...");
+    console.log("Current page: ", currentPage);
     fetch(product_info)
         .then((response) => response.json())
         .then((data) => {
             console.log("Data received:", data);
-            createGridItems(data);
+            createGridItems(data, currentPage);
         })
         .catch((error) => {
             console.error("Error fetching product data:", error);
         });
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    console.log("DOM loaded...");
+    // Initialize page to 1
+    let currentPage = 1;
+    localStorage.setItem("currentPage", 1)
+
+    // Load initial set of items
+    fetchProductData(currentPage);
 });

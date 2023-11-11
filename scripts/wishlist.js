@@ -1,71 +1,29 @@
-// Check if a product is already in the wish list
-function _isInWishList(productId) {
-    const savedWishlist = localStorage.getItem('wishlist');
-    if (savedWishlist) {
-        wishList = JSON.parse(savedWishlist);
-    }
-    return wishList.hasOwnProperty(productId);
+// Function to create grid items from product data
+function createWishlistItems(data) {
+    console.log("Creating wishlist items...");
+
+    // Import wishlist
+    const wishlist = JSON.parse(localStorage.getItem('wishlist')) || {};
+    console.log(wishlist);
+
+    // Get wishlist product ids
+    const wishlistProductIDs = Object.keys(wishlist)
+    console.log(wishlistProductIDs)
+
+    // Append each wishlist item to the wishlist Container
+    const wishlistContainer = document.getElementById("wishlist-container")
+    data.forEach((product) => {
+        if (_isInWishList(product.id)) {
+            console.log(product)
+            var gridItem = buildGridItem(product)
+            wishlistContainer.appendChild(gridItem)
+        }
+    });
+
+    // Stop showing loading circle
+    document.getElementById("loading-container").style.display = "none";
 }
 
-// Function to add a product to the wish list then update local wishlist
-function _addToWishList(product) {
-    // Load wishlist from localStorage
-    const savedWishlist = localStorage.getItem('wishlist');
-    if (savedWishlist) {
-        wishList = JSON.parse(savedWishlist);
-    }
-    wishList[product.id] = product;
-    localStorage.setItem('wishlist', JSON.stringify(wishList));
-}
-
-// Function to remove a product to the wish list
-function _removeFromWishList(product) {
-    // Load wishlist from localStorage
-    const savedWishlist = localStorage.getItem('wishlist');
-    if (savedWishlist) {
-        wishList = JSON.parse(savedWishlist);
-    }
-    delete wishList[product.id];
-    localStorage.setItem('wishlist', JSON.stringify(wishList));
-}
-
-// Function to handle the "Add to Wishlist" button click
-function addToWishListClick(event) {
-    // Get the parent grid-item element
-    const gridItem = event.target.closest(".grid-item");
-
-    // Load wishlist from localStorage
-    const savedWishlist = localStorage.getItem('wishlist');
-    if (savedWishlist) {
-        wishList = JSON.parse(savedWishlist);
-    }
-
-    // Check if the product is not already in the wish list
-    if (!_isInWishList(gridItem.id)) {
-        _addToWishList(gridItem);
-        console.log(wishList);
-        // You can also update the UI to indicate that the product is in the wish list
-    }
-}
-
-// Function to handle the "Remove from Wishlist" button click
-function removeFromWishListClick(event) {
-    // Get the parent grid-item element
-    const gridItem = event.target.closest(".grid-item");
-
-    // Load wishlist from localStorage
-    const savedWishlist = localStorage.getItem('wishlist');
-    if (savedWishlist) {
-        wishList = JSON.parse(savedWishlist);
-    }
-
-    // Double check if the product is in the wish list
-    if (_isInWishList(gridItem.id)) {
-        _removeFromWishList(gridItem);
-        console.log(wishList);
-        // You can also update the UI to indicate that the product is in the wish list
-    }
-}
 
 // Load wishlist items from localStorage when the page loads
 document.addEventListener("DOMContentLoaded", function () {
@@ -79,33 +37,29 @@ document.addEventListener("DOMContentLoaded", function () {
     else {
         // Load the wishlist from localStorage
         console.log("a wishlist exists")
-        const savedWishlist = localStorage.getItem('wishlist');
-        if (savedWishlist) {
-            wishList = JSON.parse(savedWishlist);
-            console.log(wishList)
-        }
+        const wishlist = JSON.parse(localStorage.getItem('wishlist'));
+        console.log("wishlist:", wishlist)
     }
 
-    // Display all wish list saves when the button is clicked
-    const wishlistSavesButton = document.getElementById("wishlist-saves-button");
-    wishlistSavesButton.addEventListener("click", function () {
-        const gridContainer = document.getElementById("grid-container");
-        const gridItems = document.querySelectorAll(".grid-item");
-
-        // Hide all grid items that aren't in wishlist
-        gridItems.forEach((item) => {
-            if (!_isInWishList(item.id)) {
-                item.classList.toggle("hide", true);
-            }
+    // Display wishlist items
+    const product_info = "product_info.json";
+    fetch(product_info)
+        .then((response) => response.json())
+        .then((data) => {
+            console.log("Data received:", data);
+            createWishlistItems(data);
         })
+        .catch((error) => {
+            console.error("Error fetching product data:", error);
+        });
 
-        // Re-arrange grid container so that there is only 1 column
-        gridContainer.style.gridTemplateColumns = "repeat(1, 1fr)";
-        gridContainer.style.width = "50%";
-        gridContainer.style.justifySelf = "center";
-        gridContainer.style.margin = "0 auto";
-        gridContainer.style.marginTop = "64px";
-    })
+    // Hide Search Button
+    const searchButton = document.getElementById("search-icon");
+    searchButton.style.display = "none";
+
+    // Display Back Button
+    const backButton = document.getElementById("back-button");
+    backButton.style.display = "block";
 });
 
 

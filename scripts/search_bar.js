@@ -6,14 +6,10 @@ function clickSearch() {
   const searchInput = document.getElementById("search-input")
   const searchClose = document.getElementById("close-search-button")
   const wishlistSaves = document.getElementById("wishlist-saves-button")
-  const release = document.getElementById("release")
   const gridContainer = document.querySelector(".grid-container")
   if (filterButtons.style.display === "none" || filterButtons.style.display === "") {
     // Stop displaying the Title
     headerTitle.style.display = "none"
-
-    // Stop displaying the release build
-    release.style.display = "none"
 
     // Stop displaying the wishlist saves button
     wishlistSaves.style.display = "none"
@@ -32,10 +28,7 @@ function clickSearch() {
     filterButtons.style.display = "none" // Hide the filter buttons
 
     // Show the Title
-    headerTitle.style.display = "contents"
-
-    // Show the release build
-    release.style.display = "block"
+    headerTitle.style.display = "block"
 
     // Show the wishlist saves button
     wishlistSaves.style.display = "block"
@@ -52,7 +45,6 @@ function closeSearch() {
   const searchClose = document.getElementById("close-search-button")
   const searchInput = document.getElementById("search-input")
   const wishlistSaves = document.getElementById("wishlist-saves-button")
-  const release = document.getElementById("release")
   const gridContainer = document.querySelector(".grid-container")
   const gridItems = document.querySelectorAll(".grid-item");
 
@@ -65,10 +57,7 @@ function closeSearch() {
   filterButtons.style.display = "none" // Hide the filter buttons
 
   // Show the Title
-  headerTitle.style.display = "contents"
-
-  // Show the release build
-  release.style.display = "block"
+  headerTitle.style.display = "block"
 
   // Show the wishlist saves button
   wishlistSaves.style.display = "block"

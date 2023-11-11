@@ -12,28 +12,34 @@
   <meta charset="utf-8">
   <title>Windan Market</title>
   <link rel="stylesheet" href="core.css">
+  <script src="scripts/grid_item.js" defer></script>
   <script src="scripts/image_import.js" defer></script>
   <script src="scripts/search_bar.js" defer></script>
   <script src="scripts/button_filters.js" defer></script>
-  <script src="scripts/wishlist.js" defer></script>
 </head>
 
 <body>
   <!--HEADER-->
   <nav class="header-container">
     <div class="header-column-left">
-      <img src="icons/search.png" alt="Search Icon" id="search-icon" onclick="clickSearch()">
+      <img src="icons/search-icon.png" alt="Search Icon" id="search-icon" onclick="clickSearch()">
+      <a href="/index.html">
+        <img src="icons/back-button.png" alt="Back Button" id="back-button">
+      </a>
     </div>
     <div class="header-column-center">
       <h1 class="header-title">
         <a href="/index.html">Windan Market</a>
+        <img src="icons/beta-button.png" alt="Beta Button" id="beta-button">
       </h1>
       <div class="search-container">
         <input type="search" id="search-input" placeholder="">
       </div>
     </div>
     <div class="header-column-right">
-      <img src="icons/wishlist-button.png" alt="Wishlist Saves" id="wishlist-saves-button">
+      <a href="/wishlist.html">
+        <img src="icons/wishlist-button.png" alt="Wishlist Saves" id="wishlist-saves-button">
+      </a>
       <img src="icons/close-button.png" alt="Close Search" id="close-search-button" onclick="closeSearch()">
     </div>
   </nav>
@@ -46,13 +52,16 @@
     <!-- Add more category buttons as needed -->
   </div>
 
-  <!--Temporary release info-->
-  <p id="release">beta release (0.0.001)</p>
-
   <!--PRODUCTS-->
   <div class="middle-section" id="middle-section">
+    <div id="loading-container">
+      <img src="icons/loading.gif" alt="Loading..." id="loading-img">
+    </div>
     <div class="grid-container" id="grid-container">
       <!-- Grid items will be populated here using image_import.js -->
+    </div>
+    <div class="load-more-container" id="load-more-container">
+      <button id="load-more-button" onclick="loadMore()">Load More</button>
     </div>
     <div class="no-search-results-inactive" id="no-search-results">
       <h3>Sorry, no search results found.</h3>
