@@ -38,16 +38,15 @@ function loadMore() {
     currentPage++;
     console.log(currentPage)
     localStorage.setItem("currentPage", currentPage);
-    fetchProductData(currentPage);
+    fetchProductPageData(currentPage);
 }
 
 
-const product_info = "product_info.json";
 // Fetch product data from the external source
-function fetchProductData(currentPage) {
+function fetchProductPageData(currentPage) {
     console.log("Fetching data...");
     console.log("Current page: ", currentPage);
-    fetch(product_info)
+    fetch("product_info.json")
         .then((response) => response.json())
         .then((data) => {
             console.log("Data received:", data);
@@ -65,5 +64,5 @@ document.addEventListener("DOMContentLoaded", function () {
     localStorage.setItem("currentPage", 1)
 
     // Load initial set of items
-    fetchProductData(currentPage);
+    fetchProductPageData(currentPage);
 });

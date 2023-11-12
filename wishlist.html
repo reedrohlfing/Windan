@@ -13,7 +13,6 @@
     <title>Windan Market</title>
     <link rel="stylesheet" href="core.css">
     <script src="scripts/grid_item.js" defer></script>
-    <script src="scripts/search_bar.js" defer></script>
     <script src="scripts/button_filters.js" defer></script>
     <script src="scripts/wishlist.js" defer></script>
 </head>
@@ -22,7 +21,6 @@
     <!--HEADER-->
     <nav class="header-container">
         <div class="header-column-left">
-            <img src="icons/search-icon.png" alt="Search Icon" id="search-icon" onclick="clickSearch()">
             <a href="/index.html">
                 <img src="icons/back-button.png" alt="Back Button" id="back-button">
             </a>
@@ -40,17 +38,8 @@
             <a href="/wishlist.html">
                 <img src="icons/wishlist-button.png" alt="Wishlist Saves" id="wishlist-saves-button">
             </a>
-            <img src="icons/close-button.png" alt="Close Search" id="close-search-button" onclick="closeSearch()">
         </div>
     </nav>
-
-    <!--FILTERS-->
-    <div class="filter-buttons" id="filter-buttons">
-        <button class="filter-button" id="all-button" data-category="all" onclick="allButton()">All</button>
-        <button class="filter-button" id="surf-button" data-category="surf" onclick="surfButton()">Surf</button>
-        <button class="filter-button" id="city-button" data-category="city" onclick="cityButton()">City</button>
-        <!-- Add more category buttons as needed -->
-    </div>
 
     <!--PRODUCTS-->
     <div class="middle-section" id="middle-section">
@@ -59,6 +48,9 @@
         </div>
         <div class="wishlist-container" id="wishlist-container">
             <!-- Wishlist items will be populated here using image_import.js -->
+            <div class="no-wishlist" id="no-wishlist">
+                <h3>Please add products to view them here.</h3>
+            </div>
         </div>
         <div class="load-more-container" id="load-more-container">
             <button id="load-more-button" onclick="loadMore()">Load More</button>

@@ -24,12 +24,12 @@ function _removeFromWishList(product) {
 function addToWishListClick(event) {
     // Get the parent grid-item element
     const gridItem = event.target.closest(".grid-item");
-    console.log(gridItem)
 
     // Check if the product is not already in the wish list
     if (!_isInWishList(gridItem.id)) {
         _addToWishList(gridItem);
-        console.log(JSON.parse(localStorage.getItem('wishlist')));
+        console.log("Item Added: ", gridItem.id);
+        console.log("Updated Wishlist: ", JSON.parse(localStorage.getItem('wishlist')))
         // You can also update the UI to indicate that the product is in the wish list
     }
 }
@@ -42,9 +42,21 @@ function removeFromWishListClick(event) {
     // Double check if the product is in the wish list
     if (_isInWishList(gridItem.id)) {
         _removeFromWishList(gridItem);
-        console.log(JSON.parse(localStorage.getItem('wishlist')));
+        console.log("Item Removed: ", gridItem.id);
+        console.log("Updated Wishlist: ", JSON.parse(localStorage.getItem('wishlist')));
         // You can also update the UI to indicate that the product is in the wish list
     }
+
+    // Reload the page to remove item from wishlist
+    if (document.querySelector(".wishlist-container")) {
+        location.reload()
+    }
+
+    // // Another option for removing the item, but if all items were removed, the "Add to wishlist" message wasn't being displayed
+    // if (document.querySelector(".wishlist-container")) {
+    //     const wishlistContainer = document.querySelector(".wishlist-container")
+    //     wishlistContainer.removeChild(gridItem)
+    // }
 }
 
 function buildGridItem(product) {

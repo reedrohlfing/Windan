@@ -209,6 +209,13 @@ body::-webkit-scrollbar-thumb:hover {
   /* Four columns with equal width */
 }
 
+.search-results-container {
+  display: grid;
+  margin-top: 96px;
+  grid-template-columns: repeat(4, 1fr);
+  /* Four columns with equal width */
+}
+
 .wishlist-container {
   display: grid;
   margin-top: 64px;
@@ -219,7 +226,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .wishlist-container>.grid-item {
-  width: 50%;
+  width: 25%;
 }
 
 /* Style grid items*/
@@ -312,6 +319,15 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .no-search-results-active {
+  display: block;
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+  padding-left: 0px;
+}
+
+.no-wishlist {
   display: block;
   width: 100%;
   padding-top: 50px;

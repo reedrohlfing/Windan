@@ -7,6 +7,8 @@ function clickSearch() {
   const searchClose = document.getElementById("close-search-button")
   const wishlistSaves = document.getElementById("wishlist-saves-button")
   const gridContainer = document.querySelector(".grid-container")
+  const searchResultsContainer = document.querySelector(".search-results-container")
+  const loadMoreContainer = document.querySelector(".load-more-container")
   if (filterButtons.style.display === "none" || filterButtons.style.display === "") {
     // Stop displaying the Title
     headerTitle.style.display = "none"
@@ -14,10 +16,15 @@ function clickSearch() {
     // Stop displaying the wishlist saves button
     wishlistSaves.style.display = "none"
 
+    // Stop displaying the load more container
+    loadMoreContainer.classList.toggle("hide", true)
+
     // Show the search/filter bar
     searchContainer.style.display = "contents" // Show the search bar
+    searchResultsContainer.classList.toggle("hide", false) // Show the search results
     searchClose.style.display = "block" // Show search close icon
     filterButtons.style.display = "grid" // Show the filter buttons
+    searchResultsContainer.style.marginTop = "96px" // Make space for filter buttons
     gridContainer.style.marginTop = "96px" // Make space for filter buttons
     searchInput.focus(); // Focus on the search input to open the keyboard
   } else {
@@ -33,8 +40,9 @@ function clickSearch() {
     // Show the wishlist saves button
     wishlistSaves.style.display = "block"
 
-    // Move grid back up
+    // Move grid back up and display
     gridContainer.style.marginTop = "64px"
+    searchResultsContainer.style.marginTop = "64px"
   }
 }
 
@@ -46,6 +54,8 @@ function closeSearch() {
   const searchInput = document.getElementById("search-input")
   const wishlistSaves = document.getElementById("wishlist-saves-button")
   const gridContainer = document.querySelector(".grid-container")
+  const searchResultsContainer = document.querySelector(".search-results-container")
+  const loadMoreContainer = document.querySelector(".load-more-container")
   const gridItems = document.querySelectorAll(".grid-item");
 
   // Clear the search input
@@ -56,19 +66,23 @@ function closeSearch() {
   searchClose.style.display = "none" // Hide close icon
   filterButtons.style.display = "none" // Hide the filter buttons
 
+  // Hide the search results container
+  searchResultsContainer.classList.toggle("hide", true)
+
   // Show the Title
   headerTitle.style.display = "block"
 
   // Show the wishlist saves button
   wishlistSaves.style.display = "block"
 
+  // Show the load more button
+  loadMoreContainer.classList.toggle("hide", false)
+
   // Move grid back up
   gridContainer.style.marginTop = "64px"
 
-  // Redisplay all grid items
-  gridItems.forEach((item) => {
-    item.classList.toggle("hide", false);
-  })
+  // Show the grid Container
+  gridContainer.classList.toggle("hide", false);
 
   // Stop displaying no search results if present
   const noSearchResults = document.querySelector("#no-search-results");
@@ -77,32 +91,62 @@ function closeSearch() {
 
 }
 
+var allProductData; // Declare allProductData in the outer scope
+// Fetch product data from the external source
+function fetchProductData() {
+  // Get all products
+  console.log("Fetching data...");
+  fetch("product_info.json")
+    .then((response) => response.json())
+    .then((data) => {
+      console.log("Data received:", data);
+      allProductData = data; // Assign data to allProductData
+    })
+    .catch((error) => {
+      console.error("Error fetching product data:", error);
+    });
+}
+
 // Search Bar main functionality
-const searchInput = document.getElementById("search-input");
+var searchInput = document.getElementById("search-input");
 searchInput.addEventListener("input", input => {
-  // Get all current grid items on page
-  const gridItems = document.querySelectorAll(".grid-item");
+  // Get all products
+  fetchProductData();
+  const gridContainer = document.querySelector(".grid-container");
   const query = input.target.value.toLowerCase();
   console.log(query);
+
+  // Hide grid container
+  gridContainer.classList.toggle("hide", true);
+
+  // Remove any previous search contents
+  const searchResultsContainer = document.querySelector(".search-results-container")
+  while (searchResultsContainer.firstChild) {
+    searchResultsContainer.removeChild(searchResultsContainer.firstChild);
+  }
+
   // Initiate match variable
   let match = false;
+  let matches = [];
+
   // Loop through grid items and check if their title/description matches the query
-  gridItems.forEach(item => {
+  console.log(allProductData)
+  allProductData.forEach((product) => {
     // Get the description and title of the current item
-    const description = item.querySelector("#item-description").textContent.toLowerCase();
-    const title = item.querySelector("#item-title").textContent.toLowerCase();
+    const description = product.description.toLowerCase();
+    const title = product.title.toLowerCase();
 
     // Checks to see if the item matched, creates a bool
     const isMatch = description.includes(query) || title.includes(query);
 
-    // If there is not a match, hide the grid item
-    item.classList.toggle("hide", !isMatch);
-
-    // Turns match to true if the search matches any of the grid items
+    // Create a list of matches then create new gridContainer
     if (isMatch) {
       match = true;
+      matches.push(product);
     }
   })
+
+
   // Only display "No Results" message is there are no results from search
   if (!match) {
     const noSearchResults = document.querySelector("#no-search-results");
@@ -110,13 +154,21 @@ searchInput.addEventListener("input", input => {
     noSearchResults.classList.toggle("no-search-results-active", true);
   }
   else if (query == "") {
+    gridContainer.classList.toggle("hide", false);
     const noSearchResults = document.querySelector("#no-search-results");
     noSearchResults.classList.toggle("no-search-results-inactive", true);
     noSearchResults.classList.toggle("no-search-results-active", false);
   }
   else {
+    // There are matches
     const noSearchResults = document.querySelector("#no-search-results");
     noSearchResults.classList.toggle("no-search-results-inactive", true);
     noSearchResults.classList.toggle("no-search-results-active", false);
+
+    // After for loop completes, create grid Container based on items in list
+    matches.forEach(product => {
+      var gridItem = buildGridItem(product);
+      searchResultsContainer.appendChild(gridItem);
+    })
   }
 })
