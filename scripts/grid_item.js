@@ -76,7 +76,7 @@ function buildGridItem(product) {
     const img = document.createElement("img");
     img.id = "item-image";
     img.src = product.imageURL;
-    img.alt = "Image";
+    img.alt = "Missing Product Image";
 
     // Set the data-category attribute based on the product's category
     gridItem.setAttribute("data-category", product.category);

@@ -59,10 +59,21 @@ function fetchProductPageData(currentPage) {
 
 document.addEventListener("DOMContentLoaded", function () {
     console.log("DOM loaded...");
+    console.log("initial page: ", localStorage.getItem("currentPage"))
     // Initialize page to 1
-    let currentPage = 1;
-    localStorage.setItem("currentPage", 1)
+    if (localStorage.getItem("currentPage") == null) {
+        localStorage.setItem("currentPage", 1)
+        let currentPage = localStorage.getItem("currentPage");
+        // Load initial set of items
+        fetchProductPageData(currentPage);
+    }
+    else {
+        let currentPage = parseInt(localStorage.getItem("currentPage"));
+        for (let i = 1; i <= currentPage; i++) {
+            //load all pages
+            fetchProductPageData(i)
+        }
+    }
 
-    // Load initial set of items
-    fetchProductPageData(currentPage);
+
 });
