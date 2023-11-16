@@ -19,6 +19,21 @@ html {
   letter-spacing: 1px;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+  height: 5px;
+  background-color: white;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 10, 0.6);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 10, 0.4);
+}
+
 .hide {
   display: none !important;
 }
@@ -112,6 +127,11 @@ html {
   text-decoration: none;
 }
 
+.header-column-center a:visited {
+  color: white;
+  text-decoration: none;
+}
+
 .header-column-center a:hover {
   color: rgb(213, 213, 213);
   text-decoration: none;
@@ -169,14 +189,23 @@ button:active {
   font-weight: bold;
 }
 
-.quick-links a:link,
-a:visited {
+.quick-links a:link {
   color: rgb(213, 213, 213);
   text-decoration: none;
 }
 
-.quick-links a:hover,
-a:active {
+.quick-links a:visited {
+  color: rgb(213, 213, 213);
+  text-decoration: none;
+}
+
+.quick-links a:hover {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.quick-links a:active {
   color: white;
   font-weight: bold;
   text-decoration: none;
@@ -192,26 +221,10 @@ body {
   z-index: 5;
 }
 
-body::-webkit-scrollbar {
-  width: 10px;
-  background-color: white;
-}
-
-body::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 10, 0.6);
-  border-radius: 6px;
-}
-
-body::-webkit-scrollbar-thumb:hover {
-  background-color: rgba(0, 0, 10, 0.4);
-  /* Change scrollbar color on hover */
-}
-
 #loading-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 64px;
 }
 
 #loading-img {
@@ -220,24 +233,63 @@ body::-webkit-scrollbar-thumb:hover {
   padding: 25px;
 }
 
+.middle-section {
+  margin-top: 64px;
+}
+
 /* Create a 4-column grid layout */
 .grid-container {
   display: grid;
-  margin-top: 64px;
   grid-template-columns: repeat(4, 1fr);
   /* Four columns with equal width */
 }
 
+.category-grid {
+  display: flex;
+  flex-direction: row;
+  height: fit-content;
+  overflow-x: auto;
+  white-space: nowrap;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.category-grid>.grid-item {
+  margin-right: 10px;
+  /* Adjust as needed for spacing between images */
+  flex-shrink: 0;
+}
+
+.category-grid>.grid-item>a {
+  max-height: fit-content;
+  /* Set the maximum height */
+}
+
+.category-grid>.grid-item>a img {
+  height: 500px;
+  /* Set the maximum height */
+}
+
+.category-title-div {
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.category-title {
+  font-size: 30px;
+  text-decoration: none;
+  color: rgba(0, 0, 10, 0.8);
+}
+
 .search-results-container {
   display: grid;
-  margin-top: 96px;
   grid-template-columns: repeat(4, 1fr);
   /* Four columns with equal width */
 }
 
 .wishlist-container {
   display: grid;
-  margin-top: 64px;
   width: 100%;
   grid-template-columns: 1fr;
   /* Four columns with equal width */
@@ -245,7 +297,22 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .wishlist-container>.grid-item {
-  width: 25%;
+  width: 50%;
+  grid-template-columns: 1fr 1fr;
+}
+
+.wishlist-container>.grid-item>.add-info-div>.brand-name {
+  text-align: left;
+  padding-left: 20px;
+}
+
+.wishlist-container>.grid-item>.add-info-div>.brand-description {
+  text-align: left;
+  padding-left: 20px;
+  color: rgba(0, 0, 10, 0.7);
+  font-family: 'LeagueGothic';
+  font-size: 18px;
+  font-weight: normal;
 }
 
 /* Style grid items*/
@@ -441,13 +508,6 @@ body::-webkit-scrollbar-thumb:hover {
   padding: 5px;
 }
 
-/* In between mobile and browser */
-@media (max-width:1500px) {
-  .grid-container {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
 /* Changes for mobile */
 @media (max-width:1200px) {
   .header-title {
@@ -461,6 +521,28 @@ body::-webkit-scrollbar-thumb:hover {
   .grid-container {
     /* two columns on mobile devices */
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  #item-title {
+    font-size: 15px;
+  }
+
+  #item-price {
+    font-size: 14px;
+  }
+
+  .wishlist-container>.grid-item {
+    width: 100%;
+  }
+
+  .wishlist-container>.grid-item>.add-info-div>.brand-name {
+    padding-left: 10px;
+    font-size: 16px;
+  }
+
+  .wishlist-container>.grid-item>.add-info-div>.brand-description {
+    padding-left: 10px;
+    font-size: 14px;
   }
 
   .footer-content {

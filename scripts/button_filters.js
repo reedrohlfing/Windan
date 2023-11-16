@@ -10,7 +10,7 @@ function surfButton() {
     // Filter images by category
     const gridItems = document.querySelectorAll(".grid-item");
     gridItems.forEach((item) => {
-        const itemCategory = item.getAttribute("data-category")
+        const itemCategory = item.getAttribute("product-style")
         if (itemCategory == "surf") {
             item.style.display = "grid"; // Display matching items
         }
@@ -24,7 +24,7 @@ function cityButton() {
     // Filter images by category
     const gridItems = document.querySelectorAll(".grid-item");
     gridItems.forEach((item) => {
-        const itemCategory = item.getAttribute("data-category")
+        const itemCategory = item.getAttribute("product-style")
         if (itemCategory == "city") {
             item.style.display = "grid"; // Display matching items
         }

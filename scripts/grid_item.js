@@ -77,9 +77,10 @@ function buildGridItem(product) {
     img.id = "item-image";
     img.src = product.imageURL;
     img.alt = "Missing Product Image";
+    img.setAttribute("onerror", "removeGridItem(this)");
 
     // Set the data-category attribute based on the product's category
-    gridItem.setAttribute("data-category", product.category);
+    gridItem.setAttribute("product-style", product.style);
 
     // Append the image to the anchor element
     link.appendChild(img);
@@ -174,4 +175,13 @@ function buildGridItem(product) {
     gridItem.appendChild(itemDescDiv);
 
     return gridItem;
+}
+
+
+function removeGridItem(element) {
+    // Find the closest parent with the class .grid-item and remove it
+    var gridItem = element.closest('.grid-item');
+    if (gridItem) {
+        gridItem.remove();
+    }
 }

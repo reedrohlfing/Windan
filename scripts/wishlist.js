@@ -15,6 +15,20 @@ function createWishlistItems(data) {
         if (_isInWishList(product.id)) {
             console.log("    ", product.id, product)
             var gridItem = buildGridItem(product)
+
+            // Append Grid Item with additional information to display
+            let addInfoDiv = document.createElement("div");
+            addInfoDiv.className = "add-info-div"
+            let brand = document.createElement("h3");
+            brand.textContent = product.brand;
+            brand.className = "brand-name";
+            let brandDesc = document.createElement("p");
+            brandDesc.textContent = product.description;
+            brandDesc.className = "brand-description";
+            addInfoDiv.appendChild(brand);
+            addInfoDiv.appendChild(brandDesc);
+            gridItem.appendChild(addInfoDiv);
+
             wishlistContainer.appendChild(gridItem)
         }
     });

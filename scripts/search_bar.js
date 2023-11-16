@@ -7,6 +7,7 @@ function clickSearch() {
   const searchClose = document.getElementById("close-search-button")
   const wishlistSaves = document.getElementById("wishlist-saves-button")
   const gridContainer = document.querySelector(".grid-container")
+  const middleContainer = document.querySelector(".middle-section")
   const searchResultsContainer = document.querySelector(".search-results-container")
   const loadMoreContainer = document.querySelector(".load-more-container")
   if (filterButtons.style.display === "none" || filterButtons.style.display === "") {
@@ -24,8 +25,7 @@ function clickSearch() {
     searchResultsContainer.classList.toggle("hide", false) // Show the search results
     searchClose.style.display = "block" // Show search close icon
     filterButtons.style.display = "grid" // Show the filter buttons
-    searchResultsContainer.style.marginTop = "96px" // Make space for filter buttons
-    gridContainer.style.marginTop = "96px" // Make space for filter buttons
+    middleContainer.style.marginTop = "96px" // Make space for filter buttons
     searchInput.focus(); // Focus on the search input to open the keyboard
   } else {
     // This will be executed when the search icon is clicked while search bar is open
@@ -41,8 +41,7 @@ function clickSearch() {
     wishlistSaves.style.display = "block"
 
     // Move grid back up and display
-    gridContainer.style.marginTop = "64px"
-    searchResultsContainer.style.marginTop = "64px"
+    middleContainer.style.marginTop = "64px"
   }
 }
 
@@ -54,6 +53,7 @@ function closeSearch() {
   const searchInput = document.getElementById("search-input")
   const wishlistSaves = document.getElementById("wishlist-saves-button")
   const gridContainer = document.querySelector(".grid-container")
+  const middleContainer = document.querySelector(".middle-section")
   const searchResultsContainer = document.querySelector(".search-results-container")
   const loadMoreContainer = document.querySelector(".load-more-container")
   const gridItems = document.querySelectorAll(".grid-item");
@@ -79,7 +79,7 @@ function closeSearch() {
   loadMoreContainer.classList.toggle("hide", false)
 
   // Move grid back up
-  gridContainer.style.marginTop = "64px"
+  middleContainer.style.marginTop = "64px"
 
   // Show the grid Container
   gridContainer.classList.toggle("hide", false);
