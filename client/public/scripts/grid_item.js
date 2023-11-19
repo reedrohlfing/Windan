@@ -79,8 +79,11 @@ function buildGridItem(product) {
     img.alt = "Missing Product Image";
     img.setAttribute("onerror", "removeGridItem(this)");
 
-    // Set the data-category attribute based on the product's category
+    // Set the product-style attribute based on the product's style
     gridItem.setAttribute("product-style", product.style);
+
+    // Set the product-style attribute based on the product's style
+    gridItem.setAttribute("data-category", product.category);
 
     // Append the image to the anchor element
     link.appendChild(img);

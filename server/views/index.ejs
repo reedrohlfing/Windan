@@ -1,8 +1,7 @@
-<!DOCTYPE html>
 <!-- Removes scalability, for consitency accross devices -->
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
 
-<!-- To view this site locally, run "npx browser-sync start --server --files "./*.html" --no-open --no-notify --directory" from this folder -->
+<!-- To view this site locally, run "npm run dev" from the server folder -->
 <!-- Then in your web browser, access the site via http://localhost:3000/ or mobile from http://192.168.1.147:3000/-->
 
 <html>
@@ -10,9 +9,10 @@
 <head>
   <!--basic starting setup-->
   <meta charset="utf-8">
+  <link rel="icon" href="/icons/wm_logo.png" type="image/png">
   <title>Windan Market</title>
-  <link rel="stylesheet" href="core.css">
-  <link rel="stylesheet" href="fonts/ostrich-sans-master/webfonts/ostrich-sans.css">
+  <link rel="stylesheet" href="/core.css">
+  <link rel="stylesheet" href="/fonts/ostrich-sans-master/webfonts/ostrich-sans.css">
   <script src="scripts/grid_item.js" defer></script>
   <script src="scripts/image_import.js" defer></script>
   <script src="scripts/search_bar.js" defer></script>
@@ -21,28 +21,27 @@
 </head>
 
 <body>
-  <!--HEADER-->
   <nav class="header-container">
     <div class="header-column-left">
-      <img src="icons/search-icon.png" alt="Search Icon" id="search-icon" onclick="clickSearch()">
-      <a href="/index.html">
-        <img src="icons/back-button.png" alt="Back Button" id="back-button">
+      <img src="/icons/search-icon.png" alt="Search Icon" id="search-icon" onclick="clickSearch()">
+      <a href="/">
+        <img src="/icons/back-button.png" alt="Back Button" id="back-button">
       </a>
     </div>
     <div class="header-column-center">
       <h1 class="header-title">
         <a onclick="clickHeadTitle()">Windan Market</a>
-        <img src="icons/beta-button.png" alt="Beta Button" id="beta-button">
+        <img src="/icons/beta-button.png" alt="Beta Button" id="beta-button">
       </h1>
       <div class="search-container">
         <input type="search" id="search-input" placeholder="">
       </div>
     </div>
     <div class="header-column-right">
-      <a href="/wishlist.html">
-        <img src="icons/wishlist-button.png" alt="Wishlist Saves" id="wishlist-saves-button">
+      <a href="/wishlist">
+        <img src="/icons/wishlist-button.png" alt="Wishlist Saves" id="wishlist-saves-button">
       </a>
-      <img src="icons/close-button.png" alt="Close Search" id="close-search-button" onclick="closeSearch()">
+      <img src="/icons/close-button.png" alt="Close Search" id="close-search-button" onclick="closeSearch()">
     </div>
   </nav>
 
@@ -57,7 +56,7 @@
   <!--PRODUCTS-->
   <div class="middle-section" id="middle-section">
     <div id="loading-container">
-      <img src="icons/loading.gif" alt="Loading..." id="loading-img">
+      <img src="/icons/loading.gif" alt="Loading..." id="loading-img">
     </div>
     <div class="grid-container" id="grid-container">
       <!-- Grid items will be populated here using image_import.js -->
@@ -74,37 +73,8 @@
   </div>
 </body>
 
-
-<!-- ||||||||||||||||||FOOTER||||||||||||||||||||||||| -->
 <footer class="footer">
-  <div class="footer-container">
-    <div class="footer-content">
-      <div class="footer-section">
-        <h3 id="motto">Coded-core.</h3>
-      </div>
-      <div class="footer-section">
-        <h3>Windan Team</h3>
-        <p>info@windanmarket.com</p>
-        <p>La Jolla, CA</p>
-      </div>
-      <div class="footer-section">
-        <h3>Quick Links</h3>
-        <ul class="quick-links">
-          <li><a href="/index.html">Windan Home</a></li>
-          <li><a href="#">Recommendations</a></li>
-          <li><a href="#">Advertising</a></li>
-          <li><a href="\Report">Get Updates</a></li>
-        </ul>
-      </div>
-      <div class="footer-section">
-        <h3>Windan Socials</h3>
-        <ul class="social-icons">
-          <li><a href="https://www.instagram.com/windanmarket/" target="_blank"><img id="instagram"
-                src="icons/instagram-light.png" alt="Instagram"></a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
+  <%- include('./partials/footer.ejs') %>
 </footer>
 
 </html>
