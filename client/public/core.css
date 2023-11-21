@@ -38,6 +38,19 @@ html {
   display: none !important;
 }
 
+#page-title {
+  padding-left: 10%;
+  font-size: 30px;
+}
+
+input:focus {
+  outline: none;
+}
+
+textarea:focus {
+  outline: none;
+}
+
 .header-container {
   position: fixed;
   top: 0;
@@ -80,10 +93,6 @@ html {
   color: rgb(213, 213, 213);
   background-color: transparent;
   border-color: transparent;
-}
-
-#search-input:focus {
-  outline: none;
 }
 
 #close-search-button {
@@ -161,7 +170,7 @@ html {
 
 .filter-buttons {
   position: fixed;
-  margin-top: 61px;
+  margin-top: 69px;
   width: 100%;
   /* initially not shown until clicked */
   display: none;
@@ -191,8 +200,7 @@ button:active {
 
 body {
   position: static;
-  margin-left: 0;
-  margin-right: 0;
+  margin: 0;
   display: flex;
   flex-direction: column;
   padding: 0;
@@ -212,7 +220,7 @@ body {
 }
 
 .middle-section {
-  margin-top: 64px;
+  margin-top: 72px;
 }
 
 /* Create a 4-column grid layout */
@@ -403,6 +411,75 @@ body {
   padding-left: 0px;
 }
 
+#response-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 75%;
+  margin: auto;
+}
+
+#rec-form-top-half {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+#rec-form-top-half #name-rec {
+  grid-column: 1;
+  padding-bottom: 10px;
+}
+
+#rec-form-top-half #email-rec {
+  grid-column: 1;
+  padding-bottom: 10px;
+}
+
+#rec-form-top-right {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+
+#rec-form-top-right #submit-rec {
+  grid-column: 2;
+}
+
+#rec-form-top-right #submit-rec button {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+#rec-form-top-right #submit-rec img {
+  height: 70px;
+}
+
+#rec-form-top-right #submit-rec img:hover {
+  content: url("icons/double-right-darkened.png");
+}
+
+#rec-form-bottom-half {
+  width: 100%;
+  justify-content: start;
+  padding-bottom: 30px;
+}
+
+#response-form input {
+  background-color: rgb(213, 213, 213);
+  border-color: transparent;
+  width: 100%;
+}
+
+#response-form textarea {
+  background-color: rgb(213, 213, 213);
+  border-color: transparent;
+  width: 100%;
+  resize: none;
+}
+
+#response-form #recommendation {
+  height: 300px;
+  vertical-align: top;
+}
+
 /* Style the footer container */
 .footer {
   position: static;
@@ -518,6 +595,14 @@ body {
 @media (max-width:1200px) {
   .header-title {
     font-size: 14px;
+  }
+
+  #page-title {
+    font-size: 20px;
+  }
+
+  #response-form label {
+    font-size: 16px;
   }
 
   #search-input {

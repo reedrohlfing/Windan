@@ -25,7 +25,7 @@ function clickSearch() {
     searchResultsContainer.classList.toggle("hide", false) // Show the search results
     searchClose.style.display = "block" // Show search close icon
     filterButtons.style.display = "grid" // Show the filter buttons
-    middleContainer.style.marginTop = "96px" // Make space for filter buttons
+    middleContainer.style.marginTop = "104px" // Make space for filter buttons
     searchInput.focus(); // Focus on the search input to open the keyboard
   } else {
     // This will be executed when the search icon is clicked while search bar is open
@@ -41,7 +41,7 @@ function clickSearch() {
     wishlistSaves.style.display = "block"
 
     // Move grid back up and display
-    middleContainer.style.marginTop = "64px"
+    middleContainer.style.marginTop = "72px"
   }
 }
 
@@ -79,7 +79,7 @@ function closeSearch() {
   loadMoreContainer.classList.toggle("hide", false)
 
   // Move grid back up
-  middleContainer.style.marginTop = "64px"
+  middleContainer.style.marginTop = "72px"
 
   // Show the grid Container
   gridContainer.classList.toggle("hide", false);

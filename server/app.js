@@ -1,3 +1,4 @@
+const fs = require('fs');
 const express = require('express');
 const app = express();
 const port = 3000;
@@ -8,7 +9,9 @@ app.set('views', 'server/views/')
 
 app.use(express.static('client/public'))
 
-// app.use(urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: true }));
+
+app.use(express.json());
 
 app.get('/', (req, res) => {
     res.render('index')
@@ -31,10 +34,12 @@ app.get('/get-updates', (req, res) => {
 })
 
 app.post('/submit', (req, res) => {
+    console.log("Submit was clicked")
     const { name, email, recommendation } = req.body;
+    console.log(req.body)
     const responseText = `Name: ${name}\nEmail: ${email}\nRecommendation: ${recommendation}\n\n`;
 
-    appendFile('responses.txt', responseText, (err) => {
+    fs.appendFile('responses.txt', responseText, (err) => {
         if (err) throw err;
         console.log('Response saved to responses.txt');
     });

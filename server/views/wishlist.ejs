@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="core.css">
     <link rel="stylesheet" href="fonts/ostrich-sans-master/webfonts/ostrich-sans.css">
     <script src="scripts/grid_item.js" defer></script>
-    <script src="scripts/button_filters.js" defer></script>
     <script src="scripts/wishlist.js" defer></script>
 </head>
 
@@ -63,36 +62,8 @@
 </body>
 
 
-<!-- ||||||||||||||||||FOOTER||||||||||||||||||||||||| -->
 <footer class="footer">
-    <div class="footer-container">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3 id="motto">Coded-core.</h3>
-            </div>
-            <div class="footer-section">
-                <h3>Windan Team</h3>
-                <p>info@windanmarket.com</p>
-                <p>La Jolla, CA</p>
-            </div>
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul class="quick-links">
-                    <li><a href="/">Windan Home</a></li>
-                    <li><a href="/recommendations">Recommendations</a></li>
-                    <li><a href="/advertising">Advertising</a></li>
-                    <li><a href="/get-updates">Get Updates</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Windan Socials</h3>
-                <ul class="social-icons">
-                    <li><a href="https://www.instagram.com/windanmarket/" target="_blank"><img id="instagram"
-                                src="/icons/instagram-light.png" alt="Instagram"></a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
+    <%- include('./partials/footer.ejs') %>
 </footer>
 
 </html>
