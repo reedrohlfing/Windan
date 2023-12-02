@@ -1,0 +1,22 @@
+<div class="filter-buttons" id="filter-buttons">
+    <button class="filter-button" id="all-button" data-category="all" onclick="allButton()">All</button>
+    <button class="filter-button" id="surf-button" data-category="surf" onclick="surfButton()">Surf</button>
+    <button class="filter-button" id="city-button" data-category="city" onclick="cityButton()">City</button>
+    <button class="filter-button" id="all-filters" onclick="allFilters()">More</button>
+</div>
+
+
+<div class="more-filter-buttons" id="more-filters">
+    <div id="price-graph-container">
+        <button class="filter-button" id="price-graph-btn">Price Graph</button>
+        <%- include('./price_graph.ejs') %>
+    </div>
+    <div id="product-type">
+        <button class="filter-button" id="shirt-filter">Shirts</button>
+        <button class="filter-button" id="shorts-filter">Shorts</button>
+        <button class="filter-button" id="bottoms-filter">Bottoms</button>
+        <button class="filter-button" id="jackets-filter">Jackets</button>
+        <button class="filter-button" id="shoes-filter">Shoes</button>
+        <button class="filter-button" id="accessories-filter">Accessories</button>
+    </div>
+</div>

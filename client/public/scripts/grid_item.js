@@ -66,6 +66,16 @@ function buildGridItem(product) {
     // Add the product id to the grid-item
     gridItem.id = product.id;
 
+    // Create fixed size product view for image to fill
+    const itemImgDiv = document.createElement("div");
+    itemImgDiv.id = "item-img-div";
+    // Calculate half of the active screen width
+    const quarterScreenWidth = (window.innerWidth - 18) / 4;
+    const imgHt = quarterScreenWidth * 1.4;
+    itemImgDiv.style.width = quarterScreenWidth;
+    itemImgDiv.style.height = imgHt;
+
+
     // Create an anchor element (<a>) for the image
     const link = document.createElement("a");
     link.id = "item-link";
@@ -89,7 +99,8 @@ function buildGridItem(product) {
     link.appendChild(img);
 
     // Append the anchor element to the grid item
-    gridItem.appendChild(link);
+    itemImgDiv.appendChild(link);
+    gridItem.appendChild(itemImgDiv);
 
     // Create div with 2 columns for product info and wishlist button
     const itemDescDiv = document.createElement("div");

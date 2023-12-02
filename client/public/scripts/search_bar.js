@@ -1,4 +1,5 @@
 function clickSearch() {
+  const filterContainer = document.getElementById("filter-container")
   const filterButtons = document.getElementById("filter-buttons")
   const headerContainer = document.querySelector(".header-container")
   const searchContainer = document.querySelector(".search-container")
@@ -10,7 +11,7 @@ function clickSearch() {
   const middleContainer = document.querySelector(".middle-section")
   const searchResultsContainer = document.querySelector(".search-results-container")
   const loadMoreContainer = document.querySelector(".load-more-container")
-  if (filterButtons.style.display === "none" || filterButtons.style.display === "") {
+  if (filterContainer.style.display === "none" || filterContainer.style.display === "") {
     // Stop displaying the Title
     headerTitle.style.display = "none"
 
@@ -24,7 +25,8 @@ function clickSearch() {
     searchContainer.style.display = "contents" // Show the search bar
     searchResultsContainer.classList.toggle("hide", false) // Show the search results
     searchClose.style.display = "block" // Show search close icon
-    filterButtons.style.display = "grid" // Show the filter buttons
+    filterContainer.style.display = "block"
+    filterButtons.style.display = "grid"
     middleContainer.style.marginTop = "104px" // Make space for filter buttons
     searchInput.focus(); // Focus on the search input to open the keyboard
   } else {
@@ -32,7 +34,8 @@ function clickSearch() {
     // Hide search bar, close button, and filter nav
     searchContainer.style.display = "none" // Hide search bar
     searchClose.style.display = "none" // Hide close icon
-    filterButtons.style.display = "none" // Hide the filter buttons
+    filterContainer.style.display = "none" // Hide the filter buttons
+    filterButtons.style.display = "none"
 
     // Show the Title
     headerTitle.style.display = "block"
@@ -46,6 +49,7 @@ function clickSearch() {
 }
 
 function closeSearch() {
+  const filterContainer = document.getElementById("filter-container")
   const filterButtons = document.getElementById("filter-buttons")
   const searchContainer = document.querySelector(".search-container")
   const headerTitle = document.querySelector(".header-title")
@@ -64,7 +68,8 @@ function closeSearch() {
   // Hide search bar, close button, and filter nav
   searchContainer.style.display = "none" // Hide search bar
   searchClose.style.display = "none" // Hide close icon
-  filterButtons.style.display = "none" // Hide the filter buttons
+  filterContainer.style.display = "none" // Hide the filter buttons
+  filterButtons.style.display = "none"
 
   // Hide the search results container
   searchResultsContainer.classList.toggle("hide", true)

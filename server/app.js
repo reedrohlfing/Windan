@@ -17,6 +17,10 @@ app.get('/', (req, res) => {
     res.render('index')
 });
 
+app.get('/home', (req, res) => {
+    res.render('home')
+});
+
 app.get('/wishlist', (req, res) => {
     res.render('wishlist')
 });
@@ -46,12 +50,6 @@ app.post('/submit', (req, res) => {
 
     res.send('Response submitted successfully!');
 });
-
-// If not matches are found above, this page will be loaded
-app.use((req, res) => {
-    console.log("No page matches found");
-    res.status(404).redirect('/');
-})
 
 app.listen(port, () => {
     console.log(`Server is running at http://localhost:${port}`);

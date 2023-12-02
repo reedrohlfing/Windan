@@ -1,0 +1,59 @@
+<!-- Area Charts -->
+<div class="position-relative overflow-hidden" style="height: 100px;">
+    <div class="js-area-chart position-absolute w-100" data-height="100px" data-high="1500" data-low="0"
+        data-offset-x="0" data-offset-y="0" data-is-show-area="true" data-is-show-line="false"
+        data-is-show-point="false" data-is-full-width="true" data-is-stack-bars="true" data-is-show-axis-x="false"
+        data-is-show-axis-y="false" data-is-show-tooltips="false" data-fill-opacity="1" data-fill-colors='["#e7eaf3"]'
+        data-stroke-color="#e7eaf3" data-text-color-x="#77838f" data-text-offset-top-x="0" data-text-size-y=".75rem"
+        data-text-color-y="#77838f" data-points-colors='["#e7eaf3"]' data-series='[
+           [
+             {"value": 0},
+             {"value": 100},
+             {"value": 700},
+             {"value": 500},
+             {"value": 1500},
+             {"value": 200},
+             {"value": 100},
+             {"value": 50},
+             {"value": 0}
+           ]
+         ]' data-labels='["2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018"]'></div>
+
+    <div id="foregroundAreaChartDoubleResult" class="position-absolute h-100 overflow-hidden">
+        <div class="js-area-chart position-absolute" data-height="100px" data-high="1500" data-low="0" data-offset-x="0"
+            data-offset-y="0" data-is-show-area="true" data-is-show-line="false" data-is-show-point="false"
+            data-is-full-width="true" data-is-stack-bars="true" data-is-show-axis-x="false" data-is-show-axis-y="false"
+            data-is-show-tooltips="false" data-fill-opacity="1" data-fill-colors='["#377dff"]'
+            data-stroke-color="#377dff" data-text-color-x="#77838f" data-text-offset-top-x="0" data-text-size-y=".75rem"
+            data-text-color-y="#77838f" data-points-colors='["#377dff"]' data-series='[
+               [
+                 {"value": 0},
+                 {"value": 100},
+                 {"value": 700},
+                 {"value": 500},
+                 {"value": 1500},
+                 {"value": 200},
+                 {"value": 100},
+                 {"value": 50},
+                 {"value": 0}
+               ]
+             ]' data-labels='["2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018"]'></div>
+    </div>
+</div>
+<!-- End Area Charts -->
+
+<!-- Range Slider -->
+<input class="js-range-slider" type="text" data-extra-classes="u-range-slider" data-type="double"
+    data-foreground-target="#foregroundAreaChartDoubleResult" data-min="0" data-max="1000" data-from="250" data-to="750"
+    data-result-min="#rangeSliderExample7MinResult" data-result-max="#rangeSliderExample7MaxResult">
+
+<div class="d-flex justify-content-between align-items-center mt-4">
+    <div>
+        <span class="text-muted">Min price:</span>
+        <span id="rangeSliderExample7MinResult" class="text-muted"></span>
+    </div>
+    <div>
+        <span class="text-muted">Max price:</span>
+        <span id="rangeSliderExample7MaxResult" class="text-muted"></span>
+    </div>
+</div>

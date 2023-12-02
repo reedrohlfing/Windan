@@ -45,11 +45,8 @@
   </nav>
 
   <!--FILTERS-->
-  <div class="filter-buttons" id="filter-buttons">
-    <button class="filter-button" id="all-button" data-category="all" onclick="allButton()">All</button>
-    <button class="filter-button" id="surf-button" data-category="surf" onclick="surfButton()">Surf</button>
-    <button class="filter-button" id="city-button" data-category="city" onclick="cityButton()">City</button>
-    <!-- Add more category buttons as needed -->
+  <div id="filter-container">
+    <%- include('./partials/filters.ejs') %>
   </div>
 
   <!--PRODUCTS-->

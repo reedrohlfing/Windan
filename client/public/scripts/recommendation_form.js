@@ -16,23 +16,31 @@ function responseFormSubmit(event) {
         .then(result => {
             console.log(result)
             // Update the DOM or show a success message
-            //showSuccessMessage();
-            // Rreset the form
+            showSuccessMessage();
+            // Reset the form
             form.reset();
         })
         .catch(err => console.log(err))
 }
 
 function showSuccessMessage() {
+    // Hide the rec form
+    document.getElementById('rec-form').style.display = "none";
+
     // Add code to display a success message to the user
     const successMessage = document.createElement('div');
     successMessage.innerHTML = 'Form submitted successfully!';
-    successMessage.classList.add('success-message'); // You can style this class in your CSS
-    document.body.appendChild(successMessage);
+    successMessage.classList.add('success-message');
+    successMessage.style.textAlign = 'center';
+    successMessage.style.paddingTop = '50px';
+    successMessage.style.paddingBottom = '50px';
+    document.getElementById("middle-section").appendChild(successMessage);
+    console.log("success message");
 
     // Optionally, you can set a timeout to remove the success message after a few seconds
     setTimeout(() => {
         successMessage.remove();
+        document.getElementById('rec-form').style.display = "block";
     }, 5000); // Remove after 5 seconds (adjust as needed)
 }
 

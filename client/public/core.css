@@ -56,7 +56,12 @@ textarea:focus {
   top: 0;
   height: 69px;
   width: 100%;
+  border-radius: 0px;
+  transition: width 0.3s, border-radius 0.3s;
+  /* width: 95%; */
+  /* border-radius: 10px; */
   display: grid;
+  align-self: center;
   align-items: center;
   grid-template-columns: 1fr 2fr 1fr;
   background-color: rgba(0, 0, 10, 0.8);
@@ -168,16 +173,52 @@ textarea:focus {
   transform: scale(1.5);
 }
 
-.filter-buttons {
+#filter-container {
+  display: flex;
   position: fixed;
   margin-top: 69px;
-  width: 100%;
+  width: 90%;
+  align-self: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  z-index: 10;
+  transition: width 0.3s;
+}
+
+.filter-buttons {
+  position: fixed;
+  width: inherit;
+  text-align: center;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
   /* initially not shown until clicked */
   display: none;
   z-index: 9;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   background-color: rgba(0, 0, 10, 0.7);
   backdrop-filter: blur(15px);
+}
+
+.more-filter-buttons {
+  position: fixed;
+  margin-top: 33px;
+  width: inherit;
+  align-self: center;
+  text-align: center;
+  border-radius: 10px;
+  /* initially not shown until clicked */
+  display: none;
+  z-index: 9;
+  grid-template-columns: repeat(4, 1fr);
+  background-color: rgba(0, 0, 10, 0.6);
+  backdrop-filter: blur(15px);
+}
+
+.more-filter-buttons #product-type {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .filter-button {
@@ -192,9 +233,21 @@ textarea:focus {
   border-color: transparent;
 }
 
+#more-filters {
+  display: none;
+  align-self: end;
+}
+
 button:hover,
 button:active {
   border-top-color: rgb(213, 213, 213);
+  font-weight: bold;
+}
+
+.more-filter-buttons button:hover,
+button:active {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: transparent;
   font-weight: bold;
 }
 
@@ -221,6 +274,7 @@ body {
 
 .middle-section {
   margin-top: 72px;
+  min-height: 75vh;
 }
 
 /* Create a 4-column grid layout */
@@ -315,9 +369,18 @@ body {
   padding-bottom: 0;
 }
 
+.grid-item #item-img-div {
+  /* width defined in grid_item.js */
+  height: 650px;
+  overflow: hidden;
+  position: relative;
+}
+
 /* Style images within grid items */
-.grid-item img {
-  max-width: 100%;
+.grid-item #item-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .grid-item #item-link {
@@ -436,7 +499,7 @@ body {
 #rec-form-top-right {
   display: flex;
   align-items: center;
-  justify-content: right;
+  justify-content: center;
 }
 
 #rec-form-top-right #submit-rec {
@@ -449,7 +512,7 @@ body {
 }
 
 #rec-form-top-right #submit-rec img {
-  height: 70px;
+  height: 100px;
 }
 
 #rec-form-top-right #submit-rec img:hover {
@@ -459,24 +522,42 @@ body {
 #rec-form-bottom-half {
   width: 100%;
   justify-content: start;
+  padding-top: 10px;
   padding-bottom: 30px;
 }
 
 #response-form input {
-  background-color: rgb(213, 213, 213);
+  background-color: transparent;
   border-color: transparent;
+  background-color: rgba(0, 0, 10, 0.15);
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   width: 100%;
+  font-family: 'LeagueGothic';
+  font-size: 18px;
+  font-weight: lighter;
+  letter-spacing: 1px;
 }
 
 #response-form textarea {
-  background-color: rgb(213, 213, 213);
+  background-color: rgba(0, 0, 10, 0.15);
+  padding: 15px;
+  margin-top: 10px;
+  border-radius: 10px;
   border-color: transparent;
   width: 100%;
   resize: none;
+  font-family: 'LeagueGothic';
+  font-size: 18px;
+  font-weight: lighter;
+  letter-spacing: 1px;
 }
 
 #response-form #recommendation {
-  height: 300px;
+  /* fills 55% of view height, since middle-section is 75% vh */
+  height: 55vh;
   vertical-align: top;
 }
 
@@ -495,6 +576,8 @@ body {
 
 /* Center the content and limit its width */
 .footer-container {
+  position: sticky;
+  bottom: 0;
   max-width: 1200px;
   /* Adjust as needed */
   justify-content: space-evenly;
@@ -599,6 +682,21 @@ body {
 
   #page-title {
     font-size: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .filter-button {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .more-filter-buttons {
+    margin-top: 46px;
+  }
+
+  .more-filter-buttons #product-type {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   #response-form label {
