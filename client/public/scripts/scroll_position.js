@@ -11,8 +11,9 @@ window.addEventListener('beforeunload', () => {
 window.addEventListener('load', () => {
     const scrollPosition = localStorage.getItem('scrollPosition');
     const currentPage = parseInt(localStorage.getItem("currentPage"));
+    const isHomePage = window.location.pathname === '/';
     console.log("Page load: ", currentPage)
-    if (scrollPosition) {
+    if (scrollPosition && isHomePage) {
         window.scrollTo(0, parseInt(scrollPosition));
         localStorage.removeItem('scrollPosition'); // Optional: clear the stored position
     }

@@ -174,13 +174,10 @@ textarea:focus {
 }
 
 #filter-container {
-  display: flex;
   position: fixed;
   margin-top: 69px;
   width: 90%;
   align-self: center;
-  align-items: center;
-  align-content: center;
   text-align: center;
   z-index: 10;
   transition: width 0.3s;
@@ -221,6 +218,10 @@ textarea:focus {
   grid-template-columns: repeat(4, 1fr);
 }
 
+.price-graph-container {
+  padding: 15px;
+}
+
 .filter-button {
   font-size: 16px;
   position: relative;
@@ -239,7 +240,8 @@ textarea:focus {
 }
 
 button:hover,
-button:active {
+button:active,
+button:focus {
   border-top-color: rgb(213, 213, 213);
   font-weight: bold;
 }
@@ -392,6 +394,7 @@ body {
   grid-row: 2;
   /* Place the item-desc-div in the second row (bottom) */
   display: grid;
+  padding-top: 5px;
   max-height: fit-content;
   align-content: end;
   grid-template-columns: 3fr 1fr;
@@ -427,7 +430,14 @@ body {
   font-size: 18px;
   font-weight: normal;
   color: rgba(0, 0, 10, 0.8);
+  overflow: hidden;
+  /* Hide any overflow */
+  white-space: nowrap;
+  /* Prevent text from wrapping onto the next line */
+  text-overflow: ellipsis;
+  /* Display an ellipsis (...) to indicate text overflow */
 }
+
 
 #item-price {
   margin-block-start: 0;

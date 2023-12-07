@@ -71,9 +71,17 @@ function buildGridItem(product) {
     itemImgDiv.id = "item-img-div";
     // Calculate half of the active screen width
     const quarterScreenWidth = (window.innerWidth - 18) / 4;
-    const imgHt = quarterScreenWidth * 1.4;
-    itemImgDiv.style.width = quarterScreenWidth;
-    itemImgDiv.style.height = imgHt;
+    const halfScreenWidth = (window.innerWidth - 4) / 2;
+    if (window.innerWidth > 1200) {
+        itemImgDiv.style.width = quarterScreenWidth;
+        const imgHt = quarterScreenWidth * 1.4;
+        itemImgDiv.style.height = imgHt;
+    }
+    else {
+        itemImgDiv.style.width = halfScreenWidth;
+        const imgHt = quarterScreenWidth * 3;
+        itemImgDiv.style.height = imgHt;
+    }
 
 
     // Create an anchor element (<a>) for the image
@@ -105,10 +113,15 @@ function buildGridItem(product) {
     // Create div with 2 columns for product info and wishlist button
     const itemDescDiv = document.createElement("div");
     itemDescDiv.id = "item-desc-div";
+    itemDescDiv.style.width = itemImgDiv.style.width;
     const itemInfo = document.createElement("div");
     itemInfo.id = "item-info-div";
+    var gridItemWidth = parseFloat(itemImgDiv.style.width) - 35;
+    itemInfo.style.width = gridItemWidth + 'px';
+    console.log('item width: ', itemInfo.style.width)
     const itemWishlist = document.createElement("div");
     itemWishlist.id = "item-wishlist-div";
+
 
     // Create item title
     const title = document.createElement("h4");
