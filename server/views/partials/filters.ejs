@@ -8,15 +8,14 @@
 
 <div class="more-filter-buttons" id="more-filters">
     <div id="price-graph-container">
-        <button class="filter-button" id="price-graph-btn">Price Graph</button>
+        <button class="filter-button" id="price-graph-btn" onclick="priceButton()">Price Filter</button>
         <%- include('./price_graph.ejs') %>
     </div>
     <div id="product-type">
-        <button class="filter-button" id="shirt-filter">Shirts</button>
-        <button class="filter-button" id="shorts-filter">Shorts</button>
-        <button class="filter-button" id="bottoms-filter">Bottoms</button>
-        <button class="filter-button" id="jackets-filter">Jackets</button>
-        <button class="filter-button" id="shoes-filter">Shoes</button>
-        <button class="filter-button" id="accessories-filter">Accessories</button>
+        <button class="filter-button" id="tops-filter" onclick="topsButton()">Tops</button>
+        <button class="filter-button" id="bottoms-filter" onclick="bottomsButton()">Bottoms</button>
+        <button class="filter-button" id="shorts-filter" onclick="shortsButton()">Shorts</button>
+        <button class="filter-button" id="shoes-filter" onclick="shoesButton()">Shoes</button>
+        <button class="filter-button" id="accessories-filter" onclick="accessoriesButton()">Accessories</button>
     </div>
 </div>

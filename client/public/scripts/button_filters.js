@@ -1,14 +1,15 @@
 function allButton() {
-    // Filter images by category
+    // Show all items
     const gridItems = document.querySelectorAll(".grid-item");
     document.getElementById("more-filters").style.display = "none";
     gridItems.forEach((item) => {
         item.style.display = "grid"; // Display all items
     });
+    window.scrollTo(0, 0)
 }
 
 function surfButton() {
-    // Filter images by category
+    // Filter images by surf style
     const gridItems = document.querySelectorAll(".grid-item");
     document.getElementById("more-filters").style.display = "none";
     gridItems.forEach((item) => {
@@ -20,10 +21,11 @@ function surfButton() {
             item.style.display = "none"; // Hide non-matching items
         }
     });
+    window.scrollTo(0, 0)
 }
 
 function cityButton() {
-    // Filter images by category
+    // Filter images by city style
     const gridItems = document.querySelectorAll(".grid-item");
     document.getElementById("more-filters").style.display = "none";
     gridItems.forEach((item) => {
@@ -35,6 +37,7 @@ function cityButton() {
             item.style.display = "none"; // Hide non-matching items
         }
     });
+    window.scrollTo(0, 0)
 }
 
 function allFilters() {
@@ -48,6 +51,98 @@ function allFilters() {
         moreFilters.style.display = "block";
         createPriceGraph();
     }
+}
+
+function priceButton() {
+    // Show the Price Graph
+    console.log("price button clicked.")
+    const priceGraphDiv = document.getElementById("price-graph-inner-container");
+    if (priceGraphDiv.style.display == "block") {
+        priceGraphDiv.style.display = "none";
+    }
+    else {
+        priceGraphDiv.style.display = "block";
+    }
+}
+
+function topsButton() {
+    // Filter images by tops category
+    const gridItems = document.querySelectorAll(".grid-item");
+    gridItems.forEach((item) => {
+        const itemCategory = item.getAttribute("data-category")
+        if (itemCategory == "tops") {
+            item.style.display = "grid"; // Display matching items
+        }
+        else {
+            item.style.display = "none"; // Hide non-matching items
+        }
+    });
+    window.scrollTo(0, 0)
+    closeSearch();
+}
+
+function bottomsButton() {
+    // Filter images by bottoms category
+    const gridItems = document.querySelectorAll(".grid-item");
+    gridItems.forEach((item) => {
+        const itemCategory = item.getAttribute("data-category")
+        if (itemCategory == "bottoms") {
+            item.style.display = "grid"; // Display matching items
+        }
+        else {
+            item.style.display = "none"; // Hide non-matching items
+        }
+    });
+    window.scrollTo(0, 0)
+    closeSearch();
+}
+
+function shortsButton() {
+    // Filter images by shorts category
+    const gridItems = document.querySelectorAll(".grid-item");
+    gridItems.forEach((item) => {
+        const itemCategory = item.getAttribute("data-category")
+        if (itemCategory == "shorts") {
+            item.style.display = "grid"; // Display matching items
+        }
+        else {
+            item.style.display = "none"; // Hide non-matching items
+        }
+    });
+    window.scrollTo(0, 0)
+    closeSearch();
+}
+
+function shoesButton() {
+    // Filter images by shoes category
+    const gridItems = document.querySelectorAll(".grid-item");
+    gridItems.forEach((item) => {
+        const itemCategory = item.getAttribute("data-category")
+        if (itemCategory == "shoes") {
+            item.style.display = "grid"; // Display matching items
+        }
+        else {
+            item.style.display = "none"; // Hide non-matching items
+        }
+    });
+    window.scrollTo(0, 0)
+    closeSearch();
+}
+
+function accessoriesButton() {
+    // Filter images by accessories category
+    const gridItems = document.querySelectorAll(".grid-item");
+    gridItems.forEach((item) => {
+        const itemCategory = item.getAttribute("data-category")
+        if (itemCategory == "accessories") {
+            item.style.display = "grid"; // Display matching items
+        }
+        else {
+            item.style.display = "none"; // Hide non-matching items
+        }
+    });
+    window.scrollTo(0, 0)
+    closeSearch();
 }
 
 function createPriceGraph() {

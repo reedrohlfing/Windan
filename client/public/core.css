@@ -72,15 +72,16 @@ textarea:focus {
 .header-column-left {
   display: flex;
   justify-content: center;
+  column-gap: 15px;
 }
 
-#search-icon {
+.nav-button {
   transition: transform .2s;
   width: 25px;
   height: 25px;
 }
 
-#search-icon:hover {
+.nav-button:hover {
   transform: scale(1.5);
 }
 
@@ -103,24 +104,10 @@ textarea:focus {
 #close-search-button {
   /* Initially not shown until search container is displayed */
   display: none;
-  transition: transform .2s;
-  width: 25px;
-  height: 25px;
-}
-
-#close-search-button:hover {
-  transform: scale(1.5);
 }
 
 #back-button {
-  transition: transform .2s;
-  width: 25px;
-  height: 25px;
   display: none;
-}
-
-#back-button:hover {
-  transform: scale(1.5);
 }
 
 .header-column-center {
@@ -161,16 +148,6 @@ textarea:focus {
   position: relative;
   display: flex;
   justify-content: center;
-}
-
-#wishlist-saves-button {
-  transition: transform .2s;
-  width: 25px;
-  height: 25px;
-}
-
-#wishlist-saves-button:hover {
-  transform: scale(1.5);
 }
 
 #filter-container {
@@ -219,6 +196,7 @@ textarea:focus {
 }
 
 .price-graph-container {
+  display: none;
   padding: 15px;
 }
 

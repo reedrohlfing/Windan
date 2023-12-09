@@ -17,6 +17,7 @@
   <script src="scripts/grid_item.js" defer></script>
   <script src="scripts/image_import.js" defer></script>
   <script src="scripts/search_bar.js" defer></script>
+  <script src="scripts/menu.js" defer></script>
   <script src="scripts/button_filters.js" defer></script>
   <script src="scripts/scroll_position.js" defer></script>
 </head>
@@ -24,9 +25,10 @@
 <body>
   <nav class="header-container">
     <div class="header-column-left">
-      <img src="/icons/search-icon.png" alt="Search Icon" id="search-icon" onclick="clickSearch()">
+      <img src="/icons/menu.png" alt="Menu Button" class="nav-button" id="menu-button" onclick="clickMenu()">
+      <img src="/icons/search-icon.png" alt="Search Icon" class="nav-button" id="search-icon" onclick="clickSearch()">
       <a href="/">
-        <img src="/icons/back-button.png" alt="Back Button" id="back-button">
+        <img src="/icons/back-button.png" alt="Back Button" class="nav-button" id="back-button">
       </a>
     </div>
     <div class="header-column-center">
@@ -40,9 +42,10 @@
     </div>
     <div class="header-column-right">
       <a href="/wishlist">
-        <img src="/icons/wishlist-button.png" alt="Wishlist Saves" id="wishlist-saves-button">
+        <img src="/icons/wishlist-button.png" alt="Wishlist Saves" class="nav-button" id="wishlist-saves-button">
       </a>
-      <img src="/icons/close-button.png" alt="Close Search" id="close-search-button" onclick="closeSearch()">
+      <img src="/icons/close-button.png" alt="Close Search" class="nav-button" id="close-search-button"
+        onclick="closeSearch()">
     </div>
   </nav>
 
