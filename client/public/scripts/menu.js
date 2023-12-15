@@ -14,7 +14,15 @@ function clickMenu() {
         // Show the menu bar
         filterContainer.style.display = "block";
         document.getElementById("menu-options").style.display = "grid";
-        document.querySelector(".middle-section").style.marginTop = "104px"; // Make space for filter buttons
+
+        // Get height of #menu-options and add that to marginTop of #middle-section
+        var menuOptions = document.getElementById("menu-options");
+        var middleSection = document.getElementById("middle-section");
+        var currentMarginTop = parseFloat(getComputedStyle(middleSection).marginTop);
+        var menuOptionsHeight = menuOptions.clientHeight;
+        var newMarginTop = currentMarginTop + menuOptionsHeight;
+        middleSection.style.marginTop = newMarginTop + "px";
+
     } else {
         // This will be executed when the menu icon is clicked while menu is open
         // Hide search bar, close button, and filter nav

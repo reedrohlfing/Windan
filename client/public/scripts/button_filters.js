@@ -1,10 +1,3 @@
-function allButton() {
-    // Set the product info file
-    localStorage.setItem("productInfo", "product_info.json");
-    window.location.href = '/';
-    window.scrollTo(0, 0);
-}
-
 function surfButton() {
     // Set the product info file
     localStorage.setItem("productInfo", "product_info_surf.json");
