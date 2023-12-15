@@ -1,16 +1,19 @@
-<div class="filter-buttons" id="filter-buttons">
+<div class="filter-buttons" id="menu-options">
+    <button class="filter-button" id="menu-styles-button" onclick="stylesButton()">Styles</button>
+    <button class="filter-button" id="menu-filters-button" onclick="filtersButton()">Filters</button>
+</div>
+
+<div class="more-filter-buttons" id="style-buttons">
     <button class="filter-button" id="all-button" data-category="all" onclick="allButton()">All</button>
     <button class="filter-button" id="surf-button" data-category="surf" onclick="surfButton()">Surf</button>
     <button class="filter-button" id="city-button" data-category="city" onclick="cityButton()">City</button>
-    <button class="filter-button" id="all-filters" onclick="allFilters()">More</button>
 </div>
 
-
 <div class="more-filter-buttons" id="more-filters">
-    <div id="price-graph-container">
+    <!-- <div id="price-graph-container">
         <button class="filter-button" id="price-graph-btn" onclick="priceButton()">Price Filter</button>
         <%- include('./price_graph.ejs') %>
-    </div>
+    </div> -->
     <div id="product-type">
         <button class="filter-button" id="tops-filter" onclick="topsButton()">Tops</button>
         <button class="filter-button" id="bottoms-filter" onclick="bottomsButton()">Bottoms</button>

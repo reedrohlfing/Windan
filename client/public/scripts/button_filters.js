@@ -1,43 +1,22 @@
 function allButton() {
-    // Show all items
-    const gridItems = document.querySelectorAll(".grid-item");
-    document.getElementById("more-filters").style.display = "none";
-    gridItems.forEach((item) => {
-        item.style.display = "grid"; // Display all items
-    });
-    window.scrollTo(0, 0)
+    // Set the product info file
+    localStorage.setItem("productInfo", "product_info.json");
+    window.location.href = '/';
+    window.scrollTo(0, 0);
 }
 
 function surfButton() {
-    // Filter images by surf style
-    const gridItems = document.querySelectorAll(".grid-item");
-    document.getElementById("more-filters").style.display = "none";
-    gridItems.forEach((item) => {
-        const itemCategory = item.getAttribute("product-style")
-        if (itemCategory == "surf") {
-            item.style.display = "grid"; // Display matching items
-        }
-        else {
-            item.style.display = "none"; // Hide non-matching items
-        }
-    });
-    window.scrollTo(0, 0)
+    // Set the product info file
+    localStorage.setItem("productInfo", "product_info_surf.json");
+    window.location.href = '/surf';
+    window.scrollTo(0, 0);
 }
 
 function cityButton() {
-    // Filter images by city style
-    const gridItems = document.querySelectorAll(".grid-item");
-    document.getElementById("more-filters").style.display = "none";
-    gridItems.forEach((item) => {
-        const itemCategory = item.getAttribute("product-style")
-        if (itemCategory == "city") {
-            item.style.display = "grid"; // Display matching items
-        }
-        else {
-            item.style.display = "none"; // Hide non-matching items
-        }
-    });
-    window.scrollTo(0, 0)
+    // Set the product info file
+    localStorage.setItem("productInfo", "product_info_city.json");
+    window.location.href = '/city';
+    window.scrollTo(0, 0);
 }
 
 function allFilters() {
@@ -66,83 +45,38 @@ function priceButton() {
 }
 
 function topsButton() {
-    // Filter images by tops category
-    const gridItems = document.querySelectorAll(".grid-item");
-    gridItems.forEach((item) => {
-        const itemCategory = item.getAttribute("data-category")
-        if (itemCategory == "tops") {
-            item.style.display = "grid"; // Display matching items
-        }
-        else {
-            item.style.display = "none"; // Hide non-matching items
-        }
-    });
-    window.scrollTo(0, 0)
-    closeSearch();
+    // Set the product info file
+    localStorage.setItem("productInfo", "product_info_tops.json");
+    window.location.href = '/tops';
+    window.scrollTo(0, 0);
 }
 
 function bottomsButton() {
-    // Filter images by bottoms category
-    const gridItems = document.querySelectorAll(".grid-item");
-    gridItems.forEach((item) => {
-        const itemCategory = item.getAttribute("data-category")
-        if (itemCategory == "bottoms") {
-            item.style.display = "grid"; // Display matching items
-        }
-        else {
-            item.style.display = "none"; // Hide non-matching items
-        }
-    });
-    window.scrollTo(0, 0)
-    closeSearch();
+    // Set the product info file
+    localStorage.setItem("productInfo", "product_info_bottoms.json");
+    window.location.href = '/bottoms';
+    window.scrollTo(0, 0);
 }
 
 function shortsButton() {
-    // Filter images by shorts category
-    const gridItems = document.querySelectorAll(".grid-item");
-    gridItems.forEach((item) => {
-        const itemCategory = item.getAttribute("data-category")
-        if (itemCategory == "shorts") {
-            item.style.display = "grid"; // Display matching items
-        }
-        else {
-            item.style.display = "none"; // Hide non-matching items
-        }
-    });
-    window.scrollTo(0, 0)
-    closeSearch();
+    // Set the product info file
+    localStorage.setItem("productInfo", "product_info_shorts.json");
+    window.location.href = '/shorts';
+    window.scrollTo(0, 0);
 }
 
 function shoesButton() {
-    // Filter images by shoes category
-    const gridItems = document.querySelectorAll(".grid-item");
-    gridItems.forEach((item) => {
-        const itemCategory = item.getAttribute("data-category")
-        if (itemCategory == "shoes") {
-            item.style.display = "grid"; // Display matching items
-        }
-        else {
-            item.style.display = "none"; // Hide non-matching items
-        }
-    });
-    window.scrollTo(0, 0)
-    closeSearch();
+    // Set the product info file
+    localStorage.setItem("productInfo", "product_info_shoes.json");
+    window.location.href = '/shoes';
+    window.scrollTo(0, 0);
 }
 
 function accessoriesButton() {
-    // Filter images by accessories category
-    const gridItems = document.querySelectorAll(".grid-item");
-    gridItems.forEach((item) => {
-        const itemCategory = item.getAttribute("data-category")
-        if (itemCategory == "accessories") {
-            item.style.display = "grid"; // Display matching items
-        }
-        else {
-            item.style.display = "none"; // Hide non-matching items
-        }
-    });
-    window.scrollTo(0, 0)
-    closeSearch();
+    // Set the product info file
+    localStorage.setItem("productInfo", "product_info_accessories.json");
+    window.location.href = '/accessories';
+    window.scrollTo(0, 0);
 }
 
 function createPriceGraph() {

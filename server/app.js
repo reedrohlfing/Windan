@@ -13,6 +13,10 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(express.json());
 
+// Initialize
+// localStorage.setItem("currentPage", 1)
+// localStorage.setItem("productInfo", "product_info.json")
+
 app.get('/', (req, res) => {
     res.render('index')
 });
@@ -29,13 +33,42 @@ app.get('/recommendations', (req, res) => {
     res.render('recommendations')
 });
 
-// Redirect requests that haven't been made yet
-app.get('/advertising', (req, res) => {
-    res.redirect('/')
-})
-app.get('/get-updates', (req, res) => {
-    res.redirect('/')
-})
+// Render categories / filters
+app.get('/surf', (req, res) => {
+    res.render('index')
+});
+
+app.get('/city', (req, res) => {
+    res.render('index')
+});
+
+app.get('/tops', (req, res) => {
+    res.render('index')
+});
+
+app.get('/bottoms', (req, res) => {
+    res.render('index')
+});
+
+app.get('/shorts', (req, res) => {
+    res.render('index')
+});
+
+app.get('/shoes', (req, res) => {
+    res.render('index')
+});
+
+app.get('/accessories', (req, res) => {
+    res.render('index')
+});
+
+// // Redirect requests that haven't been made yet
+// app.get('/advertising', (req, res) => {
+//     res.redirect('/')
+// })
+// app.get('/get-updates', (req, res) => {
+//     res.redirect('/')
+// })
 
 app.post('/submit', (req, res) => {
     console.log("Submit was clicked")

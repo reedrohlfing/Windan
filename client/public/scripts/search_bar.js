@@ -19,6 +19,9 @@ function clickSearch() {
   loadMoreContainer.classList.toggle("hide", true)
 
   // Show the search bar
+  document.querySelector(".header-column-left").style.display = "flex";
+  document.querySelector(".header-column-center").style.display = "flex";
+  document.querySelector(".header-column-right").style.display = "flex";
   searchContainer.style.display = "contents" // Show the search bar
   searchResultsContainer.classList.toggle("hide", false) // Show the search results
   searchClose.style.display = "block" // Show search close icon
@@ -27,7 +30,7 @@ function clickSearch() {
 
 function closeSearch() {
   const filterContainer = document.getElementById("filter-container")
-  const filterButtons = document.getElementById("filter-buttons")
+  const filterButtons = document.getElementById("style-buttons")
   const searchContainer = document.querySelector(".search-container")
   const headerTitle = document.querySelector(".header-title")
   const searchClose = document.getElementById("close-search-button")

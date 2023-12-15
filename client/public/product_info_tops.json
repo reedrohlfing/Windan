@@ -1,19 +1,5 @@
 [
     {
-        "\u00ef\u00bb\u00bfpriority": "42",
-        "id": "2023KIT42",
-        "year": "2023",
-        "brand": "KITH",
-        "title": "Ronnie Fieg for Clarks Breacon",
-        "category": "shoes",
-        "description": "Breacon silhouette\n\nNubuck upper\n\nFieg branded tongue\n\nDebossed co-branded logo on side panel\n\nLeather sock liner heel patch with debossed Fieg branding\n\nStitch details\n\nHeel pulls \n\nCo-branded nubuck fobs\n\nCotton laces\n\nGenuine crepe outsole\n\n \n\nStyle: ck26167323\n\nColor: Olive Nubuck\n\nMaterial: Nubuck",
-        "price": "230",
-        "style": "city",
-        "saves": "0",
-        "siteURL": "https://kith.com/collections/kith/products/ck26167323",
-        "imageURL": "https://kith.com/cdn/shop/products/CK26167323ClarksRFBreaconOliveBubuck_14842_1296x.jpg?v=1662650342"
-    },
-    {
         "\u00ef\u00bb\u00bfpriority": "37",
         "id": "2023KIT37",
         "year": "2023",
@@ -70,48 +56,6 @@
         "imageURL": "https://kith.com/cdn/shop/files/A23AB01HT-CHAR-FRONT_1296x.jpg?v=1697570630"
     },
     {
-        "\u00ef\u00bb\u00bfpriority": "21",
-        "id": "2023AFE21",
-        "year": "2023",
-        "brand": "AFENDS",
-        "title": "Six Panel Cap",
-        "category": "accessories",
-        "description": "At Afends, the answer is always Question Everything, so we ask you: what's the question?",
-        "price": "40",
-        "style": "surf",
-        "saves": "0",
-        "siteURL": "https://us.afends.com/collections/mens-new-arrivals/products/afends-mens-questions-six-panel-cap-eucalyptus",
-        "imageURL": "https://us.afends.com/cdn/shop/products/OLIVEHAT_900x.jpg?v=1699575867"
-    },
-    {
-        "\u00ef\u00bb\u00bfpriority": "28",
-        "id": "2023KIT28",
-        "year": "2023",
-        "brand": "KITH",
-        "title": "Kith Milton Polar Fleece Balaclava",
-        "category": "accessories",
-        "description": "Polyester fabric\n\nHelmet compatible fit\n\nKith classic logo patch at front\n\n \n\nStyle: khm050503-423\n\nColor: Cyclone\n\nMaterial: 100% Polyester",
-        "price": "85",
-        "style": "city",
-        "saves": "0",
-        "siteURL": "https://kith.com/products/khm050503-423",
-        "imageURL": "https://kith.com/cdn/shop/files/KHM050503-423-FRONT_1296x.jpg?v=1701311673"
-    },
-    {
-        "\u00ef\u00bb\u00bfpriority": "25",
-        "id": "2023AFE25",
-        "year": "2023",
-        "brand": "AFENDS",
-        "title": "Organic Denim Relaxed Fit Jean",
-        "category": "bottoms",
-        "description": "These denim jeans are straight out of the 90s. Offering a mid-rise, relaxed straight leg fit, the Ninety Twos are an essential wardrobe staple. Cut from sustainable organic cotton denim in our vintage washed black shade, these midweight jeans will continue to define your everyday collection.",
-        "price": "140",
-        "style": "city",
-        "saves": "0",
-        "siteURL": "https://us.afends.com/collections/mens-new-arrivals/products/afends-mens-ninety-twos-organic-denim-straight-leg-jeans-washed-black",
-        "imageURL": "https://us.afends.com/cdn/shop/products/AfendsMensNinetyTwos-OrganicDenimRelaxedFitJean-WashedBlack-30_837d6de3-2d12-42e7-be26-04a04831d835_900x.jpg?v=1690266832"
-    },
-    {
         "\u00ef\u00bb\u00bfpriority": "9",
         "id": "2023COS9",
         "year": "2023",
@@ -152,34 +96,6 @@
         "saves": "0",
         "siteURL": "https://www.jacquemus.com/en_fr/la-maille-pavane/236KN284-2329-390.html?cgid=View_all_rtw_men",
         "imageURL": "https://www.jacquemus.com/dw/image/v2/BJFJ_PRD/on/demandware.static/-/Sites-master-jacquemus/default/dwab54b790/23H236KN284-2329-390_1.jpg?q=100"
-    },
-    {
-        "\u00ef\u00bb\u00bfpriority": "16",
-        "id": "2023Rhy16",
-        "year": "2023",
-        "brand": "Rhythm",
-        "title": "Linen Jam Pant",
-        "category": "bottoms",
-        "description": "Built from a breathable linen-cotton blend, the linen jam pant features our comfortable wayfarer fit with a 29-inch inseam and easy-wearing elastic waistband for all-day comfort.",
-        "price": "70",
-        "style": "surf",
-        "saves": "0",
-        "siteURL": "https://rhythmlivin.com/collections/mens-new-arrivals/products/linen-jam-pant-sand-rrg1023",
-        "imageURL": "https://rhythmlivin.com/cdn/shop/products/RRG1023M-PA01-LINEN-JAM-PANT-SAN_1200x1800.jpg?v=1699427114"
-    },
-    {
-        "\u00ef\u00bb\u00bfpriority": "11",
-        "id": "2023Rhy11",
-        "year": "2023",
-        "brand": "Rhythm",
-        "title": "Harmony Trunk",
-        "category": "shorts",
-        "description": "Function meets fashion with our new variation of a signature boardshort pattern. Our Harmony Trunk is constructed with a 17.5-inch outseam, a slightly longer fit than our Heritage Trunk silhouette. Designed to be worn in the surf, or around town.",
-        "price": "70",
-        "style": "surf",
-        "saves": "0",
-        "siteURL": "https://rhythmlivin.com/collections/oasis/products/harmony-trunk-mustard-nov23",
-        "imageURL": "https://rhythmlivin.com/cdn/shop/products/IMG_10115_1200x1800.jpg?v=1698803666"
     },
     {
         "\u00ef\u00bb\u00bfpriority": "59",
@@ -238,20 +154,6 @@
         "imageURL": "https://marketstudios.com/cdn/shop/files/399001478_EVERYTHING_SFINET-SHIRT_WASHEDBLACK_01.png"
     },
     {
-        "\u00ef\u00bb\u00bfpriority": "22",
-        "id": "2023AFE22",
-        "year": "2023",
-        "brand": "AFENDS",
-        "title": "Recycled Swim Short 18\"",
-        "category": "shorts",
-        "description": "Boardshorts for everyday wear. These swim shorts offer a walkshort look, with all the boardshort essentials; an elastic waistband for comfort, multiple pockets and rash free recycled fabric. An essential to have on hand for years, these offer the perfect lightweight, soft-feel design to keep you cool and comfortable. Pair back with a hemp tee and bounce from the beach to pub easy.",
-        "price": "60",
-        "style": "surf",
-        "saves": "0",
-        "siteURL": "https://us.afends.com/collections/mens-new-arrivals/products/afends-mens-baywatch-recycled-swim-short-18-navy",
-        "imageURL": "https://us.afends.com/cdn/shop/products/M230308-NVY-1_900x.png?v=1699574250"
-    },
-    {
         "\u00ef\u00bb\u00bfpriority": "17",
         "id": "2023Rhy17",
         "year": "2023",
@@ -266,76 +168,6 @@
         "imageURL": "https://rhythmlivin.com/cdn/shop/products/1023M-FL01-REVERSE-FLEECE-HOOD-BLACK-1_1200x1800.jpg?v=1695705619"
     },
     {
-        "\u00ef\u00bb\u00bfpriority": "41",
-        "id": "2023KIT41",
-        "year": "2023",
-        "brand": "KITH",
-        "title": "Kith Wrinkle Nylon Fowler Short",
-        "category": "shorts",
-        "description": "The Wrinkle Nylon Fowler Short is crafted of classic Kith wrinkle nylon fabric and is lined with mesh, featuring an elasticated, drawcord-adjustable waistband. It is finished with Kith-branded hardware, and secure pockets at the front and back.",
-        "price": "135",
-        "style": "surf",
-        "saves": "0",
-        "siteURL": "https://kith.com/collections/kith/products/khm060395-210",
-        "imageURL": "https://kith.com/cdn/shop/files/KHM060395-210-FRONT_1296x.jpg?v=1692741376"
-    },
-    {
-        "\u00ef\u00bb\u00bfpriority": "51",
-        "id": "2023Col51",
-        "year": "2023",
-        "brand": "Collegium",
-        "title": "Pillar Destroyer Low",
-        "category": "shoes",
-        "description": "The Pillar Destroyer Low is Collegium's signature low-top silhouette, handmade in Italy and crafted with unprecedented materialization. Includes dust bag and extra laces.\u00c2\u00a0",
-        "price": "225",
-        "style": "surf",
-        "saves": "0",
-        "siteURL": "https://ourcollegium.com/collections/all/products/pillar-destroyer-low-forest-suede",
-        "imageURL": "https://ourcollegium.com/cdn/shop/products/forestside_resize.jpg?v=1623423922&width=1280"
-    },
-    {
-        "\u00ef\u00bb\u00bfpriority": "27",
-        "id": "2023JAC27",
-        "year": "2023",
-        "brand": "JACQUEMUS",
-        "title": "Le de N\u00c3\u00aemes Criollo",
-        "category": "bottoms",
-        "description": "LE CHOUCHOU",
-        "price": "490",
-        "style": "city",
-        "saves": "0",
-        "siteURL": "https://www.jacquemus.com/en_fr/le-de-nimes-criollo/236DE019-1015-31A.html",
-        "imageURL": "https://www.jacquemus.com/dw/image/v2/BJFJ_PRD/on/demandware.static/-/Sites-master-jacquemus/default/dw5f3424db/23H236DE019-1015-31A_3.jpg?q=100"
-    },
-    {
-        "\u00ef\u00bb\u00bfpriority": "12",
-        "id": "2023Rhy12",
-        "year": "2023",
-        "brand": "Rhythm",
-        "title": "Lost Orchid Trunk",
-        "category": "shorts",
-        "description": "Function meets fashion with our new variation of a signature boardshort pattern. Our Lost Orchid Trunk is constructed with a 17.5-inch outseam, a slightly longer fit than our Heritage Trunk silhouette. Designed to be worn in the surf, or around town.",
-        "price": "70",
-        "style": "surf",
-        "saves": "0",
-        "siteURL": "https://rhythmlivin.com/collections/oasis/products/lost-orchid-trunk-melon-nov23",
-        "imageURL": "https://rhythmlivin.com/cdn/shop/products/C1123M-TR04-LOST-ORCHID-TRUNK-MELON-5_045e25ed-c6b7-472e-a906-ce31e621e7e7_1200x1800.jpg?v=1698708126"
-    },
-    {
-        "\u00ef\u00bb\u00bfpriority": "30",
-        "id": "2023KIT30",
-        "year": "2023",
-        "brand": "KITH",
-        "title": "Kith Woven Oiled Suede Tote",
-        "category": "accessories",
-        "description": "The Woven Tote in Oiled Suede is crafted of premium cow suede leather, featuring an intricate hand-woven composition. It is fully lined with leather, and has an interior zippered pocket, along with an adjustable leather strap and Kith script logo foil at the upper right.",
-        "price": "545",
-        "style": "city",
-        "saves": "0",
-        "siteURL": "https://kith.com/collections/new-arrivals/products/khm040084-244",
-        "imageURL": "https://kith.com/cdn/shop/files/KHM040084-244-BACK_1296x.jpg?v=1701312976"
-    },
-    {
         "\u00ef\u00bb\u00bfpriority": "48",
         "id": "2023Mar48",
         "year": "2023",
@@ -348,34 +180,6 @@
         "saves": "0",
         "siteURL": "https://marketstudios.com/products/sportsman-bear-t-shirt",
         "imageURL": "https://marketstudios.com/cdn/shop/files/399001469SPORTSMANBEART-SHIRTWHTIE1.png?v=1683217110&width=493"
-    },
-    {
-        "\u00ef\u00bb\u00bfpriority": "3",
-        "id": "2023RVC3",
-        "year": "2023",
-        "brand": "RVCA",
-        "title": "VA Sport Trainer Elastic Waist Shorts",
-        "category": "shorts",
-        "description": "Enhanced comfort for optimal performance. Made of performance nylon-blend fabric, these VA Sport trainer shorts are complete with an elasticized waistband with an internal drawcord, side pockets, and VA logo branding at the leg.",
-        "price": "60",
-        "style": "surf",
-        "saves": "0",
-        "siteURL": "https://www.rvca.com/va-sport-trainer-elastic-waist-shorts-AVYWS00260.html",
-        "imageURL": "https://images.boardriders.com/globalGrey/rvca-products/all/default/hi-res/avyws00260_rvca,f_gzg0_bck1.jpg"
-    },
-    {
-        "\u00ef\u00bb\u00bfpriority": "39",
-        "id": "2023KIT39",
-        "year": "2023",
-        "brand": "KITH",
-        "title": "Kith for Bergdorf Goodman Logo Jacquard Double Face Scarf",
-        "category": "accessories",
-        "description": "Wool fabric\n\nKith for Bergdorf Goodman jacquard print\n\nDouble faced for wear on both sides \n\nFringed \n\nSize: L 75.98 x W 11.8 in\n\n \n\nStyle: khm10038-302\n\nColor: Stadium\n\nMaterial: 100% Wool",
-        "price": "125",
-        "style": "city",
-        "saves": "0",
-        "siteURL": "https://kith.com/collections/kith/products/khm10038-302",
-        "imageURL": "https://kith.com/cdn/shop/files/KHM10038-302-FRONT_1296x.jpg?v=1698269834"
     },
     {
         "\u00ef\u00bb\u00bfpriority": "64",
@@ -420,20 +224,6 @@
         "imageURL": "https://marketstudios.com/cdn/shop/files/399001571_DESTINATIONT-SHIRT_ECRU_01.png"
     },
     {
-        "\u00ef\u00bb\u00bfpriority": "2",
-        "id": "2023JAC2",
-        "year": "2023",
-        "brand": "JACQUEMUS",
-        "title": "Les derbies Pavane",
-        "category": "shoes",
-        "description": "Grosgrain logo derbies.",
-        "price": "800",
-        "style": "city",
-        "saves": "0",
-        "siteURL": "https://www.jacquemus.com/en_fr/les-derbies-pavane/236FO121-4015-990.html?cgid=Shoes_men",
-        "imageURL": "https://www.jacquemus.com/dw/image/v2/BJFJ_PRD/on/demandware.static/-/Sites-master-jacquemus/default/dw2cb28a29/23H236FO121-4015-990_13.jpg?q=100"
-    },
-    {
         "\u00ef\u00bb\u00bfpriority": "15",
         "id": "2023Rhy15",
         "year": "2023",
@@ -446,20 +236,6 @@
         "saves": "0",
         "siteURL": "https://rhythmlivin.com/collections/mens-t-shirts/products/underground-vintage-ss-t-shirt-sage-sept23",
         "imageURL": "https://rhythmlivin.com/cdn/shop/products/C0823M-PT01-UNDERGROUND-VINTAGE-SS-SHIRT-GREEN-1_1200x1800.jpg?v=1694063805"
-    },
-    {
-        "\u00ef\u00bb\u00bfpriority": "38",
-        "id": "2023KIT38",
-        "year": "2023",
-        "brand": "KITH",
-        "title": "Kith & New Era for the New York Knicks Wool 59FIFTY Fitted",
-        "category": "accessories",
-        "description": "Polyester fabric\n\n59FIFTY low profile fitted \n\nCotton sweatband\n\nKith for the New York Knicks embroidery at front\n\nKith classic logo embroidery on back\n\n \n\nStyle: khm050535-413\n\nColor: Nocturnal\n\nMaterial: 100% Polyester ",
-        "price": "75",
-        "style": "city",
-        "saves": "0",
-        "siteURL": "https://kith.com/collections/kith/products/khm050535-413",
-        "imageURL": "https://kith.com/cdn/shop/files/KHM050535-413-FRONT_1296x.jpg?v=1699400320"
     },
     {
         "\u00ef\u00bb\u00bfpriority": "61",
@@ -490,20 +266,6 @@
         "imageURL": "https://kith.com/cdn/shop/files/KHM031966-302-FRONT_1296x.jpg?v=1701310920"
     },
     {
-        "\u00ef\u00bb\u00bfpriority": "32",
-        "id": "2023KIT32",
-        "year": "2023",
-        "brand": "KITH",
-        "title": "Joiner Trouser Western",
-        "category": "bottoms",
-        "description": "Rigid denim fabric\n\nButton closure with zip fly\n\n5-pocket style\n\nHalf patch pockets and hammer loop on side\n\nOur Legacy embossed patch on back waistband\n\nWide leg\n\nOversized fit\n\n \n\nStyle: olm4235jwb\n\nColor: Blue Denim\n\nMaterial: 100% Cotton",
-        "price": "390",
-        "style": "surf",
-        "saves": "0",
-        "siteURL": "https://kith.com/collections/new-arrivals/products/olm4235jwb",
-        "imageURL": "https://kith.com/cdn/shop/files/OLM4235JWB-FRONT_1296x.jpg?v=1700605785"
-    },
-    {
         "\u00ef\u00bb\u00bfpriority": "63",
         "id": "2023Joh63",
         "year": "2023",
@@ -532,20 +294,6 @@
         "imageURL": "https://marketstudios.com/cdn/shop/files/397000507_TRIPLESTITCHPULLOVERHOODIE_SAGE_01.png"
     },
     {
-        "\u00ef\u00bb\u00bfpriority": "62",
-        "id": "2023Joh62",
-        "year": "2023",
-        "brand": "John Elliott",
-        "title": "KATHMANDU WOOL THROW",
-        "category": "accessories",
-        "description": "Rectangular throw in yak wool. Hand-woven by Nepali artisans with a traditional multi-colored Tibetan motif. L: 104\" (Tassel to Tassel) X W: 46.\" Made in Nepal.",
-        "price": "148",
-        "style": "surf",
-        "saves": "0",
-        "siteURL": "https://www.johnelliott.com/products/kathmandu-wool-throw-blue-multi",
-        "imageURL": "https://www.johnelliott.com/cdn/shop/files/KATHMANDU-WOOL-THROW---BLUE-MULTI-02_1424x.jpg?v=1700701353"
-    },
-    {
         "\u00ef\u00bb\u00bfpriority": "53",
         "id": "2023Joh53",
         "year": "2023",
@@ -572,20 +320,6 @@
         "saves": "0",
         "siteURL": "https://marketstudios.com/products/internet-friends-t-shirt",
         "imageURL": "https://marketstudios.com/cdn/shop/files/399001481INTERNETFRIENDST-SHIRTWHITE01.png?v=1682636904&width=493"
-    },
-    {
-        "\u00ef\u00bb\u00bfpriority": "60",
-        "id": "2023Joh60",
-        "year": "2023",
-        "brand": "John Elliott",
-        "title": "JE X MASTERMIND WORKED UTILITY PANT",
-        "category": "bottoms",
-        "description": "Relaxed fit straight leg pants in brushed heavyweight back sateen fabric. Garment dyed and stonewashed. Two pockets at the front and welt pockets at the seat. Paneled construction at the knees. Zip closure waist with waistband loops and darts. Ghost-stitching at traditional cargo pocket areas. Paint splatters throughout. Mastermind branding. Made in Japan.",
-        "price": "1198",
-        "style": "city",
-        "saves": "0",
-        "siteURL": "https://www.johnelliott.com/products/je-x-mastermind-worked-utility-pant-washed-black",
-        "imageURL": "https://www.johnelliott.com/cdn/shop/files/JE_MASTERMIND_WORKED_UTILITY_PANT_WASHED_BLACK_05_1424x.jpg?v=1701472847"
     },
     {
         "\u00ef\u00bb\u00bfpriority": "4",
@@ -644,62 +378,6 @@
         "imageURL": "https://kith.com/cdn/shop/files/KHM010333-001-FRONT_1296x.jpg?v=1692813518"
     },
     {
-        "\u00ef\u00bb\u00bfpriority": "23",
-        "id": "2023AFE23",
-        "year": "2023",
-        "brand": "AFENDS",
-        "title": "Recycled Swim Short 18\"",
-        "category": "shorts",
-        "description": "Boardshorts for everyday wear. These swim shorts offer a walkshort look, with all the boardshort essentials; an elastic waistband for comfort, multiple pockets and rash free recycled fabric. An essential to have on hand for years, these offer the perfect lightweight, soft-feel design to keep you cool and comfortable. Pair back with a hemp tee and bounce from the beach to pub easy.",
-        "price": "60",
-        "style": "surf",
-        "saves": "0",
-        "siteURL": "https://us.afends.com/collections/mens-new-arrivals/products/afends-mens-baywatch-recycled-swim-short-18-olive",
-        "imageURL": "https://us.afends.com/cdn/shop/products/M230308-OLV-1_900x.png?v=1699573894"
-    },
-    {
-        "\u00ef\u00bb\u00bfpriority": "19",
-        "id": "2023Rhy19",
-        "year": "2023",
-        "brand": "Rhythm",
-        "title": "Essential Check Cap",
-        "category": "accessories",
-        "description": "Your everyday staple, the essential check cap is a 6 panel cap cut and sewed in a wool blend with contrast peak and features a strap back closure with an adjustable slider.",
-        "price": "32",
-        "style": "surf",
-        "saves": "0",
-        "siteURL": "https://rhythmlivin.com/collections/mens-headwear/products/essential-check-cap-dawn-oct23",
-        "imageURL": "https://rhythmlivin.com/cdn/shop/products/1023M-HW02-ESSENTIAL-CHECK-CAP-DAWN-1_1200x1800.jpg?v=1695705674"
-    },
-    {
-        "\u00ef\u00bb\u00bfpriority": "18",
-        "id": "2023Rhy18",
-        "year": "2023",
-        "brand": "Rhythm",
-        "title": "Del La Mer Cap",
-        "category": "accessories",
-        "description": "The De La Mer is a relaxed 5 panel cap with a vintage style twill, cord peak and screen-printed holiday inspired logo, made for every day in the sun.",
-        "price": "30",
-        "style": "surf",
-        "saves": "0",
-        "siteURL": "https://rhythmlivin.com/collections/mens-new-arrivals/products/del-la-mer-cap-green-cap29",
-        "imageURL": "https://rhythmlivin.com/cdn/shop/files/dellamer_1_1200x1800.jpg?v=1699504613"
-    },
-    {
-        "\u00ef\u00bb\u00bfpriority": "52",
-        "id": "2023Col52",
-        "year": "2023",
-        "brand": "Collegium",
-        "title": "Pillar Trail",
-        "category": "shoes",
-        "description": "The Pillar Trail is Collegium's hybrid interpretation of a footwear creation made for every terrain with versatility in mind. This silhouette boasts design features durable enough for your light trail excursions while maintaining the comfortability fit for everyday ventures.",
-        "price": "250",
-        "style": "surf",
-        "saves": "0",
-        "siteURL": "https://ourcollegium.com/collections/low-tops/products/pillar-trail-panna",
-        "imageURL": "https://ourcollegium.com/cdn/shop/files/DSC00971_b33eb017-ff99-462d-a657-35ec2af79df2.jpg?v=1694220677&width=1280"
-    },
-    {
         "\u00ef\u00bb\u00bfpriority": "8",
         "id": "2023COS8",
         "year": "2023",
@@ -742,20 +420,6 @@
         "imageURL": "https://kith.com/cdn/shop/files/KHM031660-127-FRONT_1296x.jpg?v=1701311366"
     },
     {
-        "\u00ef\u00bb\u00bfpriority": "58",
-        "id": "2023Joh58",
-        "year": "2023",
-        "brand": "John Elliott",
-        "title": "VINTAGE VARSITY SHORTS",
-        "category": "shorts",
-        "description": "Hoops-inspired mesh shorts in our new cropped and tailored fit. Two pocket styling with a ribbed drawstring waist and double knit striped trim with vented cuffs. Fully lined.\n\nThese shorts are inspired by players who defined the era of basketball from the 80's - early 90's. They reference vintage Americana - A stylistic way of athletic dressing with cropped shorts and closer to the body uniforms.",
-        "price": "228",
-        "style": "city",
-        "saves": "0",
-        "siteURL": "https://www.johnelliott.com/products/vintage-varsity-shorts-thistle",
-        "imageURL": "https://www.johnelliott.com/cdn/shop/products/VINTAGE_VARSITY_SHORTS_SALT_X_THISTLE_04_1424x.jpg?v=1675730760"
-    },
-    {
         "\u00ef\u00bb\u00bfpriority": "29",
         "id": "2023KIT29",
         "year": "2023",
@@ -770,20 +434,6 @@
         "imageURL": "https://kith.com/cdn/shop/files/KHM010469-206-FRONT_1296x.jpg?v=1701311858"
     },
     {
-        "\u00ef\u00bb\u00bfpriority": "26",
-        "id": "2023AFE26",
-        "year": "2023",
-        "brand": "AFENDS X LE SPECS",
-        "title": "Persona",
-        "category": "accessories",
-        "description": "PERSONA sunglasses offer a unisex noughties silhouette, modern chamfered edges, and comfortable wide fit.",
-        "price": "105",
-        "style": "city",
-        "saves": "0",
-        "siteURL": "https://us.afends.com/collections/unisex-afends-x-le-specs/products/afends-afends-x-les-specs-persona-black",
-        "imageURL": "https://us.afends.com/cdn/shop/products/LAD2331406_1PERSONA_13075de1-b153-4fe9-beae-5730b50b17d5_900x.jpg?v=1699572146"
-    },
-    {
         "\u00ef\u00bb\u00bfpriority": "6",
         "id": "2023COS6",
         "year": "2023",
@@ -796,20 +446,6 @@
         "saves": "0",
         "siteURL": "https://www.cos.com/en_usd/men/menswear/coats-and-jackets/product.padded-magnetic-collar-jacket-green.1177770004.html",
         "imageURL": "https://lp.cosstores.com/app001prod?set=source[/fe/74/fe74935f84d2fe061c82f03c2c200ac6523407f0.jpg],origin[dam],type[LOOKBOOK],device[hdpi],quality[80],ImageVersion[1]&call=url[file:/product/main]&zoom=zoom"
-    },
-    {
-        "\u00ef\u00bb\u00bfpriority": "13",
-        "id": "2023Rhy13",
-        "year": "2023",
-        "brand": "Rhythm",
-        "title": "Heritage Trunk",
-        "category": "shorts",
-        "description": "Designed as an ode to surfing's history, and the essential silhouettes that defined the early eras of surf culture, the Heritage Trunk is our most considered boardshort. Made with a light, quick-drying nylon the 16.5-inch outseam is fit with signature Rhythm taping for added style.",
-        "price": "60",
-        "style": "surf",
-        "saves": "0",
-        "siteURL": "https://rhythmlivin.com/collections/oasis/products/heritage-trunk-vintage-blue-nov23",
-        "imageURL": "https://rhythmlivin.com/cdn/shop/products/000018_d8128d90-956c-4165-a3e6-72aebff4ea7b_1204x1800.jpg?v=1698708096"
     },
     {
         "\u00ef\u00bb\u00bfpriority": "14",
@@ -866,20 +502,6 @@
         "saves": "0",
         "siteURL": "https://www.johnelliott.com/products/dakota-knit-oversized-crew-black",
         "imageURL": "https://www.johnelliott.com/cdn/shop/files/DAKOTA_KNIT_OVERSIZED_CREW_BLACK_FLAT_1424x.jpg?v=1695689052"
-    },
-    {
-        "\u00ef\u00bb\u00bfpriority": "57",
-        "id": "2023Joh57",
-        "year": "2023",
-        "brand": "John Elliott",
-        "title": "HAZE LOW SUEDE",
-        "category": "shoes",
-        "description": "Low top sneaker in suede. Suede upper with contrast toe panel. Calf leather lining at the tongue and heel. Stitched sole construction. White eyelets. Branded green insole. Made by hand in Italy.\n\nWe approached footwear as we do any category - by solving our own problems. Brand codes, that we\u00e2\u20ac\u2122ve crafted over the last nine years, are embedded in the design language, like layering and transparency. The entire range is made in Northern Italy, near Florence. We use beautiful materials that will last.",
-        "price": "198",
-        "style": "surf",
-        "saves": "0",
-        "siteURL": "https://www.johnelliott.com/products/haze-low-suede-moon-grey",
-        "imageURL": "https://www.johnelliott.com/cdn/shop/products/220107_HAZE_LOW_SUEDE_GREY_06_1424x.jpg?v=1641522053"
     },
     {
         "\u00ef\u00bb\u00bfpriority": "10",

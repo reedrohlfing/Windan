@@ -23,30 +23,9 @@
 </head>
 
 <body>
+  <!--NAVBAR-->
   <nav class="header-container">
-    <div class="header-column-left">
-      <img src="/icons/menu.png" alt="Menu Button" class="nav-button" id="menu-button" onclick="clickMenu()">
-      <img src="/icons/search-icon.png" alt="Search Icon" class="nav-button" id="search-icon" onclick="clickSearch()">
-      <a href="/">
-        <img src="/icons/back-button.png" alt="Back Button" class="nav-button" id="back-button">
-      </a>
-    </div>
-    <div class="header-column-center">
-      <h1 class="header-title">
-        <a onclick="clickHeadTitle()">Windan Market</a>
-        <img src="/icons/beta-button.png" alt="Beta Button" id="beta-button">
-      </h1>
-      <div class="search-container">
-        <input type="search" id="search-input" placeholder="">
-      </div>
-    </div>
-    <div class="header-column-right">
-      <a href="/wishlist">
-        <img src="/icons/wishlist-button.png" alt="Wishlist Saves" class="nav-button" id="wishlist-saves-button">
-      </a>
-      <img src="/icons/close-button.png" alt="Close Search" class="nav-button" id="close-search-button"
-        onclick="closeSearch()">
-    </div>
+    <%- include('./partials/nav.ejs') %>
   </nav>
 
   <!--FILTERS-->

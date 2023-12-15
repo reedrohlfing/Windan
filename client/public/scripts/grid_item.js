@@ -51,12 +51,6 @@ function removeFromWishListClick(event) {
     if (document.querySelector(".wishlist-container")) {
         location.reload()
     }
-
-    // // Another option for removing the item, but if all items were removed, the "Add to wishlist" message wasn't being displayed
-    // if (document.querySelector(".wishlist-container")) {
-    //     const wishlistContainer = document.querySelector(".wishlist-container")
-    //     wishlistContainer.removeChild(gridItem)
-    // }
 }
 
 function buildGridItem(product) {
@@ -118,7 +112,6 @@ function buildGridItem(product) {
     itemInfo.id = "item-info-div";
     var gridItemWidth = parseFloat(itemImgDiv.style.width) - 35;
     itemInfo.style.width = gridItemWidth + 'px';
-    console.log('item width: ', itemInfo.style.width)
     const itemWishlist = document.createElement("div");
     itemWishlist.id = "item-wishlist-div";
 

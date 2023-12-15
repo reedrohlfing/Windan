@@ -160,6 +160,10 @@ textarea:focus {
   transition: width 0.3s;
 }
 
+#menu-options {
+  grid-template-columns: repeat(2, 1fr);
+}
+
 .filter-buttons {
   position: fixed;
   width: inherit;
@@ -172,6 +176,10 @@ textarea:focus {
   grid-template-columns: repeat(4, 1fr);
   background-color: rgba(0, 0, 10, 0.7);
   backdrop-filter: blur(15px);
+}
+
+#style-buttons {
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .more-filter-buttons {
@@ -192,7 +200,7 @@ textarea:focus {
 .more-filter-buttons #product-type {
   display: grid;
   width: 100%;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 1fr;
 }
 
 .price-graph-container {
@@ -436,8 +444,13 @@ body {
 
 #load-more-button {
   padding: 25px;
+  font-family: 'TheNeueBlack';
   background-color: transparent;
   border-color: transparent;
+}
+
+#load-more-button:hover {
+  color: rgba(0, 0, 10, 0.6);
 }
 
 .no-search-results-inactive {
@@ -681,10 +694,6 @@ body {
 
   .more-filter-buttons {
     margin-top: 46px;
-  }
-
-  .more-filter-buttons #product-type {
-    grid-template-columns: repeat(2, 1fr);
   }
 
   #response-form label {

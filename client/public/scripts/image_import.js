@@ -36,21 +36,22 @@ function createGridItems(data, page) {
 function loadMore() {
     currentPage = parseInt(localStorage.getItem("currentPage"));
     currentPage++;
-    console.log(currentPage)
+    console.log("load more, page #: ", currentPage)
     localStorage.setItem("currentPage", currentPage);
-    fetchProductPageData(currentPage);
+    fetchProductPageData();
 }
 
 
 // Fetch product data from the external source
-function fetchProductPageData(currentPage) {
+function fetchProductPageData() {
     console.log("Fetching data...");
-    console.log("Current page: ", currentPage);
-    fetch("product_info.json")
+    let current_page = localStorage.getItem("currentPage");
+    let product_info = localStorage.getItem("productInfo");
+    console.log("Current page: ", current_page, ", Product info: ", product_info);
+    fetch(product_info)
         .then((response) => response.json())
         .then((data) => {
-            console.log("Data received:", data);
-            createGridItems(data, currentPage);
+            createGridItems(data, current_page);
         })
         .catch((error) => {
             console.error("Error fetching product data:", error);
@@ -59,21 +60,31 @@ function fetchProductPageData(currentPage) {
 
 document.addEventListener("DOMContentLoaded", function () {
     console.log("DOM loaded...");
-    console.log("initial page: ", localStorage.getItem("currentPage"))
-    // Initialize page to 1
-    if (localStorage.getItem("currentPage") == null) {
-        localStorage.setItem("currentPage", 1)
-        let currentPage = localStorage.getItem("currentPage");
-        // Load initial set of items
-        fetchProductPageData(currentPage);
-    }
-    else {
-        let currentPage = parseInt(localStorage.getItem("currentPage"));
-        for (let i = 1; i <= currentPage; i++) {
-            //load all pages
-            fetchProductPageData(i)
-        }
-    }
 
+    // Check the current route
+    let currentRoute = window.location.pathname;
+    console.log(currentRoute)
 
+    // Load initial set of items
+    localStorage.setItem("currentPage", 1)
+
+    // Check the page being loaded
+    if (currentRoute == "/surf") {
+        localStorage.setItem("productInfo", "product_info_surf.json");
+    } else if (currentRoute == "/city") {
+        localStorage.setItem("productInfo", "product_info_city.json");
+    } else if (currentRoute == "/tops") {
+        localStorage.setItem("productInfo", "product_info_tops.json");
+    } else if (currentRoute == "/bottoms") {
+        localStorage.setItem("productInfo", "product_info_bottoms.json");
+    } else if (currentRoute == "/shorts") {
+        localStorage.setItem("productInfo", "product_info_shorts.json");
+    } else if (currentRoute == "/shoes") {
+        localStorage.setItem("productInfo", "product_info_shoes.json");
+    } else if (currentRoute == "/accessories") {
+        localStorage.setItem("productInfo", "product_info_accessories.json");
+    } else {
+        localStorage.setItem("productInfo", "product_info.json");
+    }
+    fetchProductPageData();
 });
